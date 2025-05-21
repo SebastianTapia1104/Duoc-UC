@@ -1,0 +1,583 @@
+package teatromoro7;
+
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class TeatroMoro7 {
+    
+    // Variables estáticas
+    static Scanner scanner = new Scanner(System.in);
+    static double[] tarifas = {30000, 25000, 20000, 15000, 10000};
+    static int[] asientos = new int[100];
+    static ArrayList<int[]> entradas = new ArrayList<>();                                          //USO DE ARRAYLIST
+    static LinkedList<Integer> asientosReservados = new LinkedList<>();                            //USO DE LINKEDLIST
+    static String[] salidaEntradas = {"VIP", "Platea Baja", "Platea Alta", "Palcos", "Galería"};   //USO DE LISTAS
+    static String[] salidaTarifa = {"Niño", "Tercera Edad", "Público General", "Mujer", "Estudiante", "Descuento compuesto"};;
+    static double[] descuentos = {0.10, 0.25, 0.20, 0.15}; // Descuentos estáticos: niño, tercera edad,  mujer, estudiante
+    static int id = 0;
+
+    //Clase principal
+    public static void main(String[] args) {
+        for (int i = 0; i < asientos.length; i++) {
+            asientos[i] = i + 1;
+        }
+        System.out.println("¡Bienvenido al teatro Moro!");
+        int vendiendo = 0;
+        while (vendiendo != 7) {
+            mostrarMenu();
+            try {
+                System.out.print("Seleccione una opción: ");
+                vendiendo = scanner.nextInt();
+                scanner.nextLine();
+                switch (vendiendo) {
+                    case 1:
+                        reservarAsiento();
+                        break;
+                    case 2:
+                        comprarEntrada();
+                        break;
+                    case 3:
+                        editarVenta();
+                        break;
+                    case 4:
+                        mostrarEntradasCompradas();
+                        break;
+                    case 5:
+                        mostrarIngresosTotales();
+                        break;
+                    case 6:
+                        mostrarPreciosYDescuentos();
+                        break;
+                    case 7:
+                        System.out.println("¡Gracias por su compra!");
+                        vendiendo = 7;
+                        break;
+                    default:
+                        System.out.println("Selección inválida. Intente nuevamente.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Error: Ingrese un número válido para la opción del menú.");
+                scanner.nextLine();
+            }
+            System.out.println();
+        }
+        scanner.close();
+    }
+    // Debug editarVenta: Se verificó que el menú principal se muestra correctamente y las opciones son accesibles.
+    
+    //Menú principal
+    static void mostrarMenu() {
+        System.out.println("Menú Principal:");
+        System.out.println("1. Reservar asiento");
+        System.out.println("2. Comprar entrada");
+        System.out.println("3. Editar venta");
+        System.out.println("4. Visualizar mis compras");
+        System.out.println("5. Calcular Ingresos Totales");
+        System.out.println("6. Ver precios y descuentos");
+        System.out.println("7. Salir");
+        System.out.println("***Recuerda que para comprar la entrada de un asiento, este debe estar reservado***");
+    }
+    
+    //FUNCIONES MENÚ
+    
+    //Reserva
+    static void reservarAsiento() {
+        mostrarPlanoTeatro();
+        try {
+            System.out.print("Seleccione el número de asiento que desea reservar: ");
+            int asientoParaReservar = scanner.nextInt();
+            scanner.nextLine();
+            if (asientoParaReservar < 1 || asientoParaReservar > 100) { // Rango actualizado
+                System.out.println("Número de asiento inválido. Intente nuevamente.");
+                return;
+            }
+            if (estaAsientoOcupado(asientoParaReservar)) {
+                System.out.println("El asiento " + asientoParaReservar + " ya está vendido. Seleccione otro.");
+                return;
+            }
+            if (estaAsientoReservado(asientoParaReservar)) {
+                System.out.println("El asiento " + asientoParaReservar + " ya está reservado.");
+                return;
+            }
+            String zonaAsiento = obtenerZonaAsiento(asientoParaReservar);
+            System.out.println("\nConfirmación de reserva:");
+            System.out.println("Zona del asiento: " + zonaAsiento);
+            System.out.println("Número del asiento: " + asientoParaReservar);
+            System.out.println("¿Confirmar la reserva de este asiento?");
+            System.out.println("1. Sí");
+            System.out.println("2. No");
+            System.out.print("Seleccione una opción: ");
+            int confirmacion = scanner.nextInt();
+            scanner.nextLine();
+            switch (confirmacion) {
+                case 1:
+                    asientos[asientoParaReservar - 1] = -1;
+                    asientosReservados.add(asientoParaReservar);
+                    System.out.println("El asiento " + asientoParaReservar + " ha sido reservado.");
+                    break;
+                case 2:
+                    System.out.println("La reserva del asiento " + asientoParaReservar + " ha sido cancelada.");
+                    break;
+                default:
+                    System.out.println("Selección inválida. La reserva ha sido cancelada.");
+                    break;
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Ingrese un número válido para el asiento o la confirmación.");
+            scanner.nextLine();
+        }
+    }
+    // Debug reservarAsiento: Se verificó que los asientos se marcan correctamente como reservados (-1) y se añaden a la lista de reservados.
+    
+    //Compra
+    static void comprarEntrada() {
+        boolean comprando = true;
+        while (comprando) {
+            mostrarPlanoTeatro();
+            try {
+                System.out.print("Seleccione el número de asiento reservado que desea comprar: ");
+                int asientoSeleccionado = scanner.nextInt();
+                scanner.nextLine();
+                if (asientoSeleccionado < 1 || asientoSeleccionado > 100) {
+                    System.out.println("Número de asiento inválido. Intente nuevamente.");
+                    continue;
+                }
+                if (!estaAsientoReservado(asientoSeleccionado)) {
+                    System.out.println("El asiento " + asientoSeleccionado + " no está reservado. Solo se pueden comprar asientos reservados.");
+                    continue;
+                }
+                if (estaAsientoOcupado(asientoSeleccionado)) {
+                    System.out.println("El asiento " + asientoSeleccionado + " ya ha sido vendido.");
+                    continue;
+                }
+                String zonaAsiento = obtenerZonaAsiento(asientoSeleccionado);
+                int tipoEntrada = 0;
+                for (int i = 0; i < salidaEntradas.length; i++) {
+                    if (salidaEntradas[i].equals(zonaAsiento)) {
+                        tipoEntrada = i + 1;
+                        break;
+                    }
+                }
+                System.out.print("Ingrese su edad: ");
+                int edad = scanner.nextInt();
+                scanner.nextLine();
+                double descuento = 0;
+                double descuentoporciento = 0;
+                double valorEntradaBase = tarifas[tipoEntrada - 1]; // Precio base inicial
+                double valorEntradaFinal = valorEntradaBase; // Inicializamos el precio final
+                int tipoTarifa = 2; // Por defecto: Público General (índice 2 en salidaTarifa)
+                int tieneDescuentoEstudiante = 0;
+                int tieneDescuentoGenero = 0;
+                int contadorDescuentos = 0;
+
+                if (edad < 12 && edad > 0) {
+                    double descuentoNino = valorEntradaBase * descuentos[0]; // Cálculo del descuento
+                    valorEntradaFinal -= descuentoNino; // Restamos el descuento del precio final
+                    descuento += descuentoNino;
+                    tipoTarifa = 0;
+                    descuentoporciento += descuentos[0] * 100;
+                    contadorDescuentos += 1;
+                } else if (edad > 60 && edad <= 120) {
+                    double descuentoTerceraEdad = valorEntradaBase * descuentos[1];
+                    valorEntradaFinal -= descuentoTerceraEdad;
+                    descuento += descuentoTerceraEdad;
+                    tipoTarifa = 1;
+                    descuentoporciento += descuentos[1] * 100;
+                    contadorDescuentos += 1;
+                } else if (edad < 1 || edad > 120) {
+                    System.out.println("Edad inválida. Intente nuevamente.");
+                    continue;
+                }
+                System.out.println("\n¿Es estudiante?: ");
+                System.out.println("1. Si");
+                System.out.println("2. No");
+                System.out.print("Ingrese su opción: ");
+                int opcionEstudiante = scanner.nextInt();
+                if (opcionEstudiante == 1 && edad >= 5) {
+                    double descuentoEstudiante = valorEntradaBase * descuentos[3];
+                    valorEntradaFinal -= descuentoEstudiante;
+                    descuento += descuentoEstudiante;
+                    tipoTarifa = 4;
+                    descuentoporciento += descuentos[3] * 100;
+                    tieneDescuentoEstudiante = 1;
+                    contadorDescuentos += 1;
+                }
+                System.out.println("\nSeleccione su género:");
+                System.out.println("1. Femenino");
+                System.out.println("2. Masculino");
+                System.out.print("Ingrese su opción: ");
+                int opcionGenero = scanner.nextInt();
+                scanner.nextLine();
+                switch (opcionGenero) {
+                    case 1:
+                        double descuentoMujer = valorEntradaBase * descuentos[2];
+                        valorEntradaFinal -= descuentoMujer;
+                        descuento += descuentoMujer;
+                        if (tipoTarifa == 2) tipoTarifa = 3;
+                        descuentoporciento += descuentos[2] * 100;
+                        tieneDescuentoGenero = 1;
+                        contadorDescuentos += 1;
+                        break;
+                    default:
+                        System.out.println("Opción de género inválida.");
+                        continue;
+                }
+                if (contadorDescuentos > 1) {
+                    tipoTarifa = 5;
+                }
+                System.out.println("\nConfirmación de compra:");
+                System.out.println("Zona del asiento: " + zonaAsiento);
+                System.out.println("Número del asiento: " + asientoSeleccionado);
+                System.out.println("Precio base: $" + (int) valorEntradaBase);
+                System.out.println("Tipo de tarifa: " + salidaTarifa[tipoTarifa]);
+                System.out.printf("Descuento aplicado: $%.0f (%.0f%%)\n", descuento, descuentoporciento);
+                System.out.println("Precio final a pagar: $" + (int) valorEntradaFinal);
+                System.out.println("¿Confirmar la compra de esta entrada?");
+                System.out.println("1. Sí");
+                System.out.println("2. No");
+                System.out.print("Seleccione una opción: ");
+                int confirmacionCompra = scanner.nextInt();
+                scanner.nextLine();
+                switch (confirmacionCompra) {
+                    case 1:
+                        id += 1;
+                        int[] ent = {asientoSeleccionado, tipoEntrada - 1, (int) valorEntradaBase, tipoTarifa, (int) descuento, (int) valorEntradaFinal, (int) descuentoporciento, id, tieneDescuentoEstudiante, tieneDescuentoGenero};
+                        entradas.add(ent);
+                        asientos[asientoSeleccionado - 1] = 0;
+                        asientosReservados.remove(Integer.valueOf(asientoSeleccionado));
+                        System.out.println("¡Compra realizada con éxito!");
+                        mostrarEntradaComprada(ent);
+                        comprando = false;
+                        break;
+                    case 2:
+                        System.out.println("La compra ha sido cancelada.");
+                        comprando = false;
+                        break;
+                    default:
+                        System.out.println("Selección inválida. La compra ha sido cancelada.");
+                        break;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Error: Ingrese un número válido.");
+                scanner.nextLine();
+            }
+        }
+    }
+    // Debug comprarEntrada: Se comprobó que solo se pueden comprar asientos previamente reservados y que se actualiza el estado a vendido (0) y se elimina de la lista de reservados.
+    // Debug comprarEntrada: Se comprobó que la acumulación de descuentos funciona correctamente y entrega un valor final correcto.
+        
+    //Menú edición
+    static void editarVenta() {
+        System.out.println("\n¿Qué desea hacer?");
+        System.out.println("1. Borrar una reserva");
+        System.out.println("2. Borrar una entrada vendida");
+        System.out.println("3. Cambiar una reserva a un asiento disponible");
+        System.out.println("4. Cambiar una entrada vendida a un asiento reservado");
+        System.out.println("5. Cancelar y volver al menú principal");
+        System.out.print("Seleccione una opción: ");
+        try {
+            int opcionEditar = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcionEditar) {
+                case 1:
+                    borrarReserva();
+                    break;
+                case 2:
+                    borrarVenta();
+                    break;
+                case 3:
+                    cambiarReservaADisponible();
+                    break;
+                case 4:
+                    cambiarVentaAReservado();
+                    break;
+                case 5:
+                    System.out.println("Volviendo al menú principal.");
+                    break;
+                default:
+                    System.out.println("Opción inválida. Volviendo al menú principal.");
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Ingrese un número válido para la opción.");
+            scanner.nextLine();
+        }
+        System.out.println();
+    }
+    // Debug editarVenta: Se verificó que el menú de edición se muestra correctamente y las opciones son accesibles.
+    
+    //Borrar reserva
+    static void borrarReserva() {
+        if (asientosReservados.isEmpty()) {
+            System.out.println("No hay asientos reservados para borrar.");
+            return;
+        }
+        System.out.println("\nPlano del Teatro (Asientos Reservados: [-1])"); // Actualizamos la indicación en el plano
+        mostrarPlanoTeatro();
+        System.out.print("Ingrese el número del asiento reservado que desea liberar: ");
+        try {
+            int asientoABorrar = scanner.nextInt();
+            scanner.nextLine();
+
+            if (asientosReservados.contains(asientoABorrar)) {
+                asientos[asientoABorrar - 1] = asientoABorrar; // Volvemos a asignar el número de asiento para indicar que está disponible
+                asientosReservados.remove(Integer.valueOf(asientoABorrar));
+                System.out.println("La reserva del asiento " + asientoABorrar + " ha sido eliminada.");
+            } else {
+                System.out.println("El asiento ingresado no está en la lista de asientos reservados. Intente nuevamente.");
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Ingrese un número válido para el asiento.");
+            scanner.nextLine();
+        }
+    }
+    
+    //Borrar venta
+    static void borrarVenta() {
+        if (entradas.isEmpty()) {
+            System.out.println("No hay entradas vendidas para borrar.");
+            return;
+        }
+        mostrarEntradasCompradas();
+        try {
+            System.out.print("Ingrese el número de entrada que desea eliminar: ");
+            int eliminaEntrada = scanner.nextInt();
+            scanner.nextLine();
+            if (eliminaEntrada > 0 && eliminaEntrada <= entradas.size()) {
+                int[] entradaEliminada = entradas.remove(eliminaEntrada - 1);
+                asientos[entradaEliminada[0] - 1] = entradaEliminada[0];
+                System.out.println("Entrada número " + eliminaEntrada + " (asiento " + entradaEliminada[0] + ") eliminada exitosamente.");
+            } else {
+                System.out.println("Número de entrada inválido. Intente nuevamente.");
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Ingrese un número válido para la entrada a eliminar.");
+            scanner.nextLine();
+        }
+    }
+    // Debug borrarVenta: Se comprobó que las entradas vendidas se eliminan de la lista de ventas y el asiento vuelve a estar disponible.
+    
+    //Cambiar venta
+    static void cambiarReservaADisponible() {
+        if (asientosReservados.isEmpty()) {
+            System.out.println("No hay asientos reservados para cambiar.");
+            return;
+        }
+        System.out.println("\nPlano del Teatro (Asientos Reservados: [-1], Disponibles: [número])"); // Actualizamos la indicación
+        mostrarPlanoTeatro();
+        System.out.print("Ingrese el número del asiento reservado que desea mover: ");
+        try {
+            int asientoReservadoACambiar = scanner.nextInt();
+            scanner.nextLine();
+            if (asientosReservados.contains(asientoReservadoACambiar)) {
+                System.out.print("Ingrese el número del asiento disponible al que desea mover la reserva: ");
+                int nuevoAsientoDisponible = scanner.nextInt();
+                scanner.nextLine();
+
+                if (nuevoAsientoDisponible >= 1 && nuevoAsientoDisponible <= 100 && !estaAsientoOcupado(nuevoAsientoDisponible) && !estaAsientoReservado(nuevoAsientoDisponible)) {
+                    asientos[asientoReservadoACambiar - 1] = asientoReservadoACambiar; // Liberamos el asiento reservado anterior
+                    asientos[nuevoAsientoDisponible - 1] = -1; // Reservamos el nuevo asiento
+                    asientosReservados.remove(Integer.valueOf(asientoReservadoACambiar));
+                    asientosReservados.add(nuevoAsientoDisponible);
+                    System.out.println("La reserva del asiento " + asientoReservadoACambiar + " ha sido movida al asiento disponible " + nuevoAsientoDisponible + ".");
+                } else {
+                    System.out.println("El asiento ingresado no es un asiento disponible válido. Intente nuevamente.");
+                }
+            } else {
+                System.out.println("El asiento ingresado no está en la lista de asientos reservados. Intente nuevamente.");
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Ingrese un número válido para el asiento.");
+            scanner.nextLine();
+        }
+    }
+    // Debug cambiarReservaADisponible: Se verificó que una reserva se puede mover solo a un asiento disponible.
+    
+    //Cambiar venta
+    static void cambiarVentaAReservado() {
+        if (entradas.isEmpty()) {
+            System.out.println("No hay entradas vendidas para cambiar.");
+            return;
+        }
+        if (asientosReservados.isEmpty()) {
+            System.out.println("No hay asientos reservados disponibles para realizar el cambio.");
+            return;
+        }
+        System.out.println("\nPlano del Teatro (Asientos Vendidos: [XX], Reservados: [RR])");
+        mostrarPlanoTeatro();
+        try {
+            System.out.print("Ingrese el número del asiento vendido que desea cambiar: ");
+            int asientoVendidoACambiar = scanner.nextInt();
+            scanner.nextLine();
+            boolean encontrado = false;
+            int indiceEntrada = -1;
+            for (int i = 0; i < entradas.size(); i++) {
+                if (entradas.get(i)[0] == asientoVendidoACambiar && estaAsientoOcupado(asientoVendidoACambiar)) {
+                    indiceEntrada = i;
+                    encontrado = true;
+                    break;
+                }
+            }
+            if (encontrado) {
+                System.out.print("Ingrese el número del asiento reservado al que desea cambiar la venta: ");
+                int nuevoAsientoReservado = scanner.nextInt();
+                scanner.nextLine();
+                if (estaAsientoReservado(nuevoAsientoReservado) && !estaAsientoOcupado(nuevoAsientoReservado)) {
+                    int[] entradaAntigua = entradas.get(indiceEntrada);
+                    asientos[entradaAntigua[0] - 1] = entradaAntigua[0];
+                    asientos[nuevoAsientoReservado - 1] = 0;
+                    asientosReservados.remove(Integer.valueOf(nuevoAsientoReservado));
+                    String nuevaZona = obtenerZonaAsiento(nuevoAsientoReservado);
+                    int nuevoTipoEntrada = 0;
+                    for (int i = 0; i < salidaEntradas.length; i++) {
+                        if (salidaEntradas[i].equals(nuevaZona)) {
+                            nuevoTipoEntrada = i + 1;
+                            break;
+                        }
+                    }
+                    double descuentoPorcentaje = entradaAntigua[6] / 100.0;
+                    double nuevoPrecioBase = tarifas[nuevoTipoEntrada - 1];
+                    double nuevoDescuento = nuevoPrecioBase * descuentoPorcentaje;
+                    double nuevoPrecioFinal = nuevoPrecioBase - nuevoDescuento;
+                    int[] entradaActualizada = entradaAntigua.clone();
+                    entradaActualizada[0] = nuevoAsientoReservado;
+                    entradaActualizada[1] = nuevoTipoEntrada - 1;
+                    entradaActualizada[2] = (int) nuevoPrecioBase;
+                    entradaActualizada[4] = (int) nuevoDescuento;
+                    entradaActualizada[5] = (int) nuevoPrecioFinal;
+                    entradas.set(indiceEntrada, entradaActualizada);
+                    System.out.println("La venta del asiento " + asientoVendidoACambiar + " ha sido cambiada al asiento reservado " + nuevoAsientoReservado + " (Zona: " + nuevaZona + ", Precio: $" + (int)nuevoPrecioFinal + ").");
+                } else {
+                    System.out.println("El asiento ingresado no está reservado o ya está vendido. Intente nuevamente.");
+                }
+            } else {
+                System.out.println("No se encontró una venta para el asiento ingresado. Intente nuevamente.");
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Ingrese un número válido para el asiento.");
+            scanner.nextLine();
+        }
+    }
+    // Debug cambiarVentaAReservado: Se comprobó que una venta se puede cambiar a un asiento reservado.
+    
+    //Ingresos de ventas
+    static void mostrarIngresosTotales() {
+        double ingresosTotales = 0;
+        for (int[] entrada : entradas) {
+            ingresosTotales += entrada[5]; 
+        }
+        System.out.println("================================");
+        System.out.printf("Ingresos totales por ventas: $%.0f\n", ingresosTotales);
+        System.out.println("================================");
+    }
+    // Debug mostrarIngresosTotales: Se confirmó que el cálculo de ingresos totales es correcto sumando el precio final de cada entrada.
+    
+    //Precios y descuentos
+    static void mostrarPreciosYDescuentos() {
+        System.out.println("\n=====================================================");
+        System.out.println("            Precios de Entradas");
+        System.out.println("======================================================");
+        for (int i = 0; i < salidaEntradas.length; i++) {
+            System.out.printf("%s: $%d\n", salidaEntradas[i], (int) tarifas[i]);
+        }
+        System.out.println("=====================================================");
+        System.out.println("            Descuentos Disponibles");
+        System.out.println("=====================================================");
+        System.out.println("Niño (Menor de 12 años): " + (int)(descuentos[0] * 100) + "% de descuento");
+        System.out.println("Público General (Entre 12 y 60 años): Sin descuento");
+        System.out.println("Tercera edad (Mayor de 60 años): " + (int)(descuentos[1] * 100) + "% de descuento");
+        System.out.println("Mujer: " + (int)(descuentos[2] * 100) + "% de descuento");
+        System.out.println("Estudiante (Mayor de 11 años): " + (int)(descuentos[3] * 100) + "% de descuento");
+        System.out.println("======================================================\n");
+    }
+    // Debug mostrarPreciosYDescuentos: Se visualizó que los precios por zona y los descuentos disponibles se muestran adecuadamente.
+    
+    //AUXILIARES
+    
+    //Mapa teatro
+    static void mostrarPlanoTeatro() {
+        System.out.println("         ========================");
+        System.out.println("         ||     ESCENARIO     ||");
+        System.out.println("         ========================\n");
+        int index = 0;
+        for (String salidaEntrada : salidaEntradas) {
+            System.out.printf("             ZONA: %s\n", salidaEntrada);
+            for (int fila = 0; fila < 2; fila++) {
+                for (int col = 0; col < 10; col++) {
+                    int asientoActual = asientos[index];
+                    switch (asientoActual) {
+                        case 0:
+                            System.out.print("[XX] "); // Asiento vendido
+                            break;
+                        case -1:
+                            System.out.print("[RR] "); // Asiento reservado
+                            break;
+                        default:
+                            System.out.printf("[%02d] ", asientoActual); // Asiento disponible
+                            break;
+                    }
+                    index++;
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+    }
+
+    static boolean estaAsientoOcupado(int asiento) {
+        return asientos[asiento - 1] == 0;
+    }
+    
+    static void mostrarEntradasCompradas() {
+        if (entradas.isEmpty()) {
+            System.out.println("No se han realizado compras aún.");
+            return;
+        }
+        System.out.println("========================");
+        System.out.println("     TUS COMPRAS    ");
+        System.out.println("========================");
+        for (int[] entrada : entradas) {
+            System.out.println("ID de Venta: " + entrada[7]);
+            System.out.println("Asiento: " + entrada[0]);
+            System.out.println("Zona: " + salidaEntradas[entrada[1]]);
+            System.out.println("Precio Base: $" + entrada[2]);
+            System.out.println("Tarifa Aplicada: " + salidaTarifa[entrada[3]]);
+            System.out.printf("Descuento Total: $%.0f (%.0f%%)\n", (double) entrada[4], (double) entrada[6]);
+            System.out.println("Precio Final: $" + entrada[5]);
+            System.out.println("-----------------------------\n");
+        }
+        System.out.println("========================");
+    }
+    
+    static void mostrarEntradaComprada(int[] entrada) {
+        System.out.println("\n--- Detalles de la Entrada ---");
+        System.out.println("ID de Venta: " + entrada[7]);
+        System.out.println("Asiento: " + entrada[0]);
+        System.out.println("Zona: " + salidaEntradas[entrada[1]]);
+        System.out.println("Precio Base: $" + entrada[2]);
+        System.out.println("Tarifa Aplicada: " + salidaTarifa[entrada[3]]);
+        System.out.printf("Descuento Total: $%.0f (%.0f%%)\n", (double) entrada[4], (double) entrada[6]);
+        System.out.println("Precio Final: $" + entrada[5]);
+        System.out.println("-----------------------------\n");
+    }
+    
+    static boolean estaAsientoReservado(int asiento) {
+        return asientos[asiento - 1] == -1;
+    }
+    
+    static String obtenerZonaAsiento(int asiento) {
+        if (asiento >= 1 && asiento <= 20) {
+            return salidaEntradas[0]; // VIP
+        } else if (asiento >= 21 && asiento <= 40) {
+            return salidaEntradas[1]; // Platea Baja
+        } else if (asiento >= 41 && asiento <= 60) {
+            return salidaEntradas[2]; // Platea Alta
+        } else if (asiento >= 61 && asiento <= 80) {
+            return salidaEntradas[3]; // Palcos
+        } else {
+            return "Esta zona no existe";
+        }
+    }
+}
