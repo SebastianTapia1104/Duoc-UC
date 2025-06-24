@@ -1,0 +1,1 @@
+2025-06-16 22:11:49 - PRESTAMO: Libro 'Don Quijote de la Mancha' (ID: L002) prestado a Usuario 'sa' (RUT: 20790098-2).
