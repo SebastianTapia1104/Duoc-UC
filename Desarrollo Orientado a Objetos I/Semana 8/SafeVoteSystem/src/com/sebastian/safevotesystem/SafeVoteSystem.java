@@ -27,7 +27,6 @@ public class SafeVoteSystem {
     }
 
     public void cargaNumeroIniciales() {
-        System.out.println("Cargando números primos iniciales desde: " + NUMEROS_INICIALES);
         try {
             List<Integer> numerosIniciales = Archivos.lectorArchivos(NUMEROS_INICIALES);
             for (int num : numerosIniciales) {
