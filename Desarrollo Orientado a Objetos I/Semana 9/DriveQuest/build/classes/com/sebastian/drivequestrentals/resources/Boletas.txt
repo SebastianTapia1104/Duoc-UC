@@ -1,0 +1,12 @@
+--- Detalle de Boleta de Arriendo ---
+Patente: ABCD12
+Marca: Ford
+Modelo: F-150
+Días de Arriendo: 8
+Precio Base Arriendo: $400,00
+Descuento Aplicado: $28,00 (7%)
+Subtotal: $372,00
+IVA (Respecto al precio base) (19%): $76,00
+Total a Pagar: $448,00
+------------------------------------
+
