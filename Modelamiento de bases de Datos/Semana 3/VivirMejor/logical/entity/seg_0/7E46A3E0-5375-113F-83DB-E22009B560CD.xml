@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7E46A3E0-5375-113F-83DB-E22009B560CD" name="APODERADO">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-02 03:11:43 UTC</createdTime>
+<ownerDesignName>VivirMejor</ownerDesignName>
+<engineerTo>
+<item key="A804F6F1-5FA0-6B11-4844-5758B4943EAF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>D0A29D2E-AF9C-5AAE-AE29-EF876B1D6B4D</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="contacto" id="7ECDA208-1A8A-E41E-DB2E-CDB38E5909F9">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-02 03:12:03 UTC</createdTime>
+<ownerDesignName>VivirMejor</ownerDesignName>
+<engineerTo>
+<item key="A804F6F1-5FA0-6B11-4844-5758B4943EAF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

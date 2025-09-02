@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Supervisión" directorySegmentName="seg_0" id="4C79AB9A-14DE-6A2C-B590-4B486DE2742C">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-02 03:34:16 UTC</createdTime>
+<ownerDesignName>VivirMejor</ownerDesignName>
+<engineerTo>
+<item key="A804F6F1-5FA0-6B11-4844-5758B4943EAF" value="true"/>
+</engineerTo>
+<targetPk>403CF04B-7ACB-1A7C-EE6F-DCA9946C3152</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>F1A56F0D-E8E3-83EB-3612-3ABE00F35AC6</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>F1A56F0D-E8E3-83EB-3612-3ABE00F35AC6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

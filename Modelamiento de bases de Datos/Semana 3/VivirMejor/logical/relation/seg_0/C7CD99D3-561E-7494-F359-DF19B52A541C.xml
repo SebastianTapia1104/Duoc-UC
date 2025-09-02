@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Asignación de personal" directorySegmentName="seg_0" id="C7CD99D3-561E-7494-F359-DF19B52A541C">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-02 03:25:43 UTC</createdTime>
+<ownerDesignName>VivirMejor</ownerDesignName>
+<engineerTo>
+<item key="A804F6F1-5FA0-6B11-4844-5758B4943EAF" value="true"/>
+</engineerTo>
+<sourcePk>403CF04B-7ACB-1A7C-EE6F-DCA9946C3152</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>tener</nameOnSource>
+<nameOnTarget>puede</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BB42A01C-265B-04A0-E898-9CCF03067BE7</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>043AE151-67F1-D9F9-B8A4-CAEE80759FB7</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
