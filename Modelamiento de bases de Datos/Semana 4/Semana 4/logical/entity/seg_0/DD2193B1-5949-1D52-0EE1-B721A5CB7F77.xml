@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DD2193B1-5949-1D52-0EE1-B721A5CB7F77" name="Postulacion">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:34:03 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="folio_postulacion_id" id="3280856C-91D4-5CE5-7937-AC9F5306F35A">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:34:36 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="folio_postulante" id="F5CA8D9A-3BB9-B48D-B527-4DA51D075620">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:19:45 UTC</createdTime>
+<generatorID>FB59EBE8-C2CC-65FE-AFDF-E8EE174C2550</generatorID>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<referedAttribute>23D31E8B-54A7-7A74-4C8A-2067DD9DEC41</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sigla_empresa" id="2ED55DFB-7E0C-8A8E-0ED8-9DF94B0167A4">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:50:25 UTC</createdTime>
+<generatorID>1B5DB3A6-CA8F-7AB7-530F-9AD3DF5EDAB0</generatorID>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<referedAttribute>A819B601-C54C-BDBF-6EE2-2E9C409BA4A0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_postulacion" id="D93853FE-D0B1-49A5-6567-2A6CD9DCE626">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:35:05 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pretension_renta" id="1BE694BF-132C-6AFA-174B-7C56E2277FC4">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:35:22 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nivel_idioma" id="2A63AEBF-F22C-2315-F103-E6B6F8951DC5">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:35:23 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_visa" id="EDF5AF75-4076-95CD-30A4-13BDDBA550F1">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:35:23 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="indicador_visa" id="5333F9C7-C304-E997-975A-C1105389E751">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:35:23 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9B4609DA-175B-791A-C3BD-DF906E903E04" name="Postulacion PK">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:35:04 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3280856C-91D4-5CE5-7937-AC9F5306F35A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

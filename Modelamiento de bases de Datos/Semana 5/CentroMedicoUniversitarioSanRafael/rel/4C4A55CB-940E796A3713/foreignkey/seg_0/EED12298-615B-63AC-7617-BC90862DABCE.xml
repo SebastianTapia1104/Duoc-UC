@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EED12298-615B-63AC-7617-BC90862DABCE" containerWithKeyObject="A729ABC7-7952-F09E-3EFD-A9E5AD213702" localFKIndex="F593A974-8E47-B768-6465-E856D98148BD" name="fk_solicitud_atencion">
+<sourceDDLFile>CentroMedicoUniversitarioSanRafael.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<importedID>0FDA4DB2-237C-4265-FBBF-5732424FE49D</importedID>
+<referredTableLongName>ATENCION</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E526071C-9D8C-72A4-E4B3-FE4B20080CC3</referredTableID>
+<keyObject>00F6B98C-5765-4CCF-01AA-5EF661B34F3C</keyObject>
+<referredKeyID>00F6B98C-5765-4CCF-01AA-5EF661B34F3C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_atencion</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

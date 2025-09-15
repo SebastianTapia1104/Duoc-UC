@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FFC36E40-5681-9737-E21A-B2F373C9BED9" name="AFP">
+<sourceDDLFile>CentroMedicoUniversitarioSanRafael.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<importedID>2456F0CE-DBF3-BDAB-6D41-3F46126F89EA</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_afp" id="4799415A-F348-71BF-86D8-5A4A7C59ABDE">
+<sourceDDLFile>CentroMedicoUniversitarioSanRafael.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<importedID>0950AC8A-03A5-2B85-B53F-941356699A4E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B1D8F2D1-419B-03B2-6305-F74E02F3720F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_afp" id="F5A89606-4990-D8EB-28D2-46B85F8DF11E">
+<sourceDDLFile>CentroMedicoUniversitarioSanRafael.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<importedID>CB549B76-5F3F-2438-196A-EE30440926A5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>7147EF64-687C-8AE3-25A4-D77EE001EB2B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="807B54D8-9964-48F1-D5B3-E67EC4599BDF" name="pk_afp">
+<sourceDDLFile>CentroMedicoUniversitarioSanRafael.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<importedID>CA268141-EA0E-ECC0-FB37-4E4E9D07C803</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4799415A-F348-71BF-86D8-5A4A7C59ABDE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

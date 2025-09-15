@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E5690390-8965-D93F-F95C-286BB3B7FBE6" containerWithKeyObject="8B06754A-FAE2-B3E1-58C7-2352D6F435CC" localFKIndex="260A26DB-D191-8F3A-FE90-29DE84D0C920" name="fk_medico_isapre">
+<sourceDDLFile>CentroMedicoUniversitarioSanRafael.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<importedID>1BB8935D-3A12-F45A-FDAC-E99B2486D101</importedID>
+<referredTableLongName>INSTITUCION_SALUD</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>3E424BCC-DC15-2E76-E545-598CF0822C49</referredTableID>
+<keyObject>FE7CC7CD-05BA-9784-3CFF-4B8B727FD635</keyObject>
+<referredKeyID>FE7CC7CD-05BA-9784-3CFF-4B8B727FD635</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_isapre</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

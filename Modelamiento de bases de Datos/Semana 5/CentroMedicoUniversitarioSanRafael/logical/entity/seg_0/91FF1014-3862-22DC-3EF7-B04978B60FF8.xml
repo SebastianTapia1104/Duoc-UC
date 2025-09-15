@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="91FF1014-3862-22DC-3EF7-B04978B60FF8" name="ATENCION">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:50 UTC</createdTime>
+<generatorID>E526071C-9D8C-72A4-E4B3-FE4B20080CC3</generatorID>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<engineerTo>
+<item key="4C4A55CB-2359-BE67-0C51-940E796A3713" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id atencion" id="E229E4A5-9ECB-6263-3B94-B7579608A3D9">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:50 UTC</createdTime>
+<generatorID>F78EB44D-C524-61C4-F1C1-90E7DAE1B80A</generatorID>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<engineerTo>
+<item key="4C4A55CB-2359-BE67-0C51-940E796A3713" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>35DD7C7A-90CD-F225-ADAB-00FD650CBBAD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha atencion" id="7137734A-EBB0-D73B-4566-DA8D1BB2AF3D">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:50 UTC</createdTime>
+<generatorID>5DE82E07-7BA6-D572-B815-97CE04829827</generatorID>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<engineerTo>
+<item key="4C4A55CB-2359-BE67-0C51-940E796A3713" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>F7A6BE6C-0DD6-AF3F-6A3A-7083CF4AF745</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo atencion" id="4DE10274-BC9F-7688-09ED-29B103284E7C">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:50 UTC</createdTime>
+<generatorID>A2017A62-0CA7-321E-ED0A-497842A2E163</generatorID>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<engineerTo>
+<item key="4C4A55CB-2359-BE67-0C51-940E796A3713" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>7147EF64-687C-8AE3-25A4-D77EE001EB2B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="diagnostico" id="14A1C4B6-6451-0400-4121-B8977CB950F4">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:50 UTC</createdTime>
+<generatorID>D7CBEB4C-8B33-3271-4D66-9556AD9E6551</generatorID>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<engineerTo>
+<item key="4C4A55CB-2359-BE67-0C51-940E796A3713" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61BD4CCB-1D4B-CC98-B09B-70CBCAD5B719</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rut paciente" id="E01402AC-1F67-08C2-508A-2A71034E2EC2">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:50 UTC</createdTime>
+<generatorID>0FBD1AD8-3952-B373-CF8B-740D7D5BD6F0</generatorID>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<engineerTo>
+<item key="4C4A55CB-2359-BE67-0C51-940E796A3713" value="true"/>
+</engineerTo>
+<referedAttribute>5A5AE263-0539-7872-52B0-7FA86F6EF51C</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>991D76CC-E1C6-FAFB-16C3-D8457BDCC895</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rut medico" id="EAB7F222-FE46-51F5-6C8C-E92B72297361">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:50 UTC</createdTime>
+<generatorID>8F4C6812-6680-3FD6-728F-4BB22CB1412C</generatorID>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<engineerTo>
+<item key="4C4A55CB-2359-BE67-0C51-940E796A3713" value="true"/>
+</engineerTo>
+<referedAttribute>769DC94D-131B-56D2-8119-530E5A68EB17</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>991D76CC-E1C6-FAFB-16C3-D8457BDCC895</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8E0C9BA6-80F2-D4D0-C5BF-4859AD01812F" name="pk atencion">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:50 UTC</createdTime>
+<generatorID>00F6B98C-5765-4CCF-01AA-5EF661B34F3C</generatorID>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<engineerTo>
+<item key="4C4A55CB-2359-BE67-0C51-940E796A3713" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E229E4A5-9ECB-6263-3B94-B7579608A3D9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

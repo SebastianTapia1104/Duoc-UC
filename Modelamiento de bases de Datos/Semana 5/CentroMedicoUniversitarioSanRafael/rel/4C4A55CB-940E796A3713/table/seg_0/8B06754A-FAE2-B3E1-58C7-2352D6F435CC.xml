@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8B06754A-FAE2-B3E1-58C7-2352D6F435CC" name="MEDICO">
+<sourceDDLFile>CentroMedicoUniversitarioSanRafael.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<importedID>AE061238-A378-FB73-F043-B3DCBCE53442</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="rut_medico" id="E532A73B-391B-0E18-5B1E-6A6581B7156B">
+<sourceDDLFile>CentroMedicoUniversitarioSanRafael.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<importedID>C16FCF8B-77C3-8C69-9DAC-FCE6CDB5513C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>991D76CC-E1C6-FAFB-16C3-D8457BDCC895</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_completo" id="E1CE91DD-49EF-1F8F-0132-E542BA0837B9">
+<sourceDDLFile>CentroMedicoUniversitarioSanRafael.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<importedID>AD97D561-4C78-0CBD-8A46-65A5950939CB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A8F9E3DE-53CB-96C5-29FC-F5FC958B7946</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_ingreso" id="72D36657-044E-EB7B-63C3-13DE077005CC">
+<sourceDDLFile>CentroMedicoUniversitarioSanRafael.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<importedID>FB0A367A-66F3-BC79-15E0-7D80198B2AC0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>F7A6BE6C-0DD6-AF3F-6A3A-7083CF4AF745</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_especialidad" id="4986ADE7-3484-FF15-4DF1-7483ECF409B3">
+<sourceDDLFile>CentroMedicoUniversitarioSanRafael.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<importedID>3C54D920-9C00-857A-645A-7557D5DFADB9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B1D8F2D1-419B-03B2-6305-F74E02F3720F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1D34A42E-3506-FB3A-101B-1546B6594C7D" referredColumn="07539F9E-F8F9-E6A3-26F4-08BDED441257"/>
+</associations>
+</Column>
+<Column name="id_afp" id="4C331F0D-F51D-63C9-F8E3-6818D1AA8919">
+<sourceDDLFile>CentroMedicoUniversitarioSanRafael.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<importedID>3234A277-8689-4EC2-E07C-44B0954F82E4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B1D8F2D1-419B-03B2-6305-F74E02F3720F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4EE1C862-9439-E2EE-48A2-93745D707CE5" referredColumn="4799415A-F348-71BF-86D8-5A4A7C59ABDE"/>
+</associations>
+</Column>
+<Column name="id_isapre" id="EDAFD149-B20B-A263-8C2C-EB48A19F059F">
+<sourceDDLFile>CentroMedicoUniversitarioSanRafael.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<importedID>43628694-3D24-F8A7-94B5-291D3DF8E441</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B1D8F2D1-419B-03B2-6305-F74E02F3720F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E5690390-8965-D93F-F95C-286BB3B7FBE6" referredColumn="984BADE3-6D71-C173-A413-3DC534F1B89B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0BE48475-2485-7C0A-C04A-DA2DA359999F" name="pk_medico">
+<sourceDDLFile>CentroMedicoUniversitarioSanRafael.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<importedID>C3D815C3-C98B-9BD6-BFF9-41893B9A65DD</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E532A73B-391B-0E18-5B1E-6A6581B7156B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6430E863-579D-E9C6-B57A-E097DB10560D" name="fk_medico_afp">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C331F0D-F51D-63C9-F8E3-6818D1AA8919"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D5CE02DE-8582-3D98-E3F2-5526074C2ED1" name="fk_medico_especialidad">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4986ADE7-3484-FF15-4DF1-7483ECF409B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="260A26DB-D191-8F3A-FE90-29DE84D0C920" name="fk_medico_isapre">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:34 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EDAFD149-B20B-A263-8C2C-EB48A19F059F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

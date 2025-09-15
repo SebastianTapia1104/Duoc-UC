@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9A1CB554-6B99-5389-116D-B4CEC2353D21" containerWithKeyObject="DFA299D3-F873-0A93-7EF4-02A899424FBD" localFKIndex="05D8235A-0743-6436-424F-330BBB088FD2" name="Postulacion_Empresa_FK">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>772A7C1D-2241-D052-BECC-DAEA36770363</importedID>
+<referredTableLongName>Empresa</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FA5D1DAA-D17B-0D78-46FD-A5C1413BEB61</referredTableID>
+<keyObject>04F0D890-0938-6796-15D8-72B24B20D684</keyObject>
+<referredKeyID>04F0D890-0938-6796-15D8-72B24B20D684</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>sigla_empresa</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

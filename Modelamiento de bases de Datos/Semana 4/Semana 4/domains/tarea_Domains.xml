@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="tarea_Domains">
+<domains>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Date_0_0_0" id="0ADD6DCC-EFDF-0539-570F-C0F7B0E40C89">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>tarea_Domains</fileName>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_10" id="16D9AD02-D79F-3D71-D8B5-0DEDBC578A0E">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>10</dataTypeSize>
+<fileName>tarea_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_200" id="2ACEAE91-3821-4240-98BB-53754FC6E065">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>200</dataTypeSize>
+<fileName>tarea_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_15" id="50D91295-A812-2FBB-9342-BE637A80C3FE">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>15</dataTypeSize>
+<fileName>tarea_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_100" id="5F5C3987-4503-E97B-57FA-23C64C04D77D">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>100</dataTypeSize>
+<fileName>tarea_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="CHAR_0_0_1" id="628409D4-2A49-8799-645E-7B10A1A1A8C6">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>1</dataTypeSize>
+<fileName>tarea_Domains</fileName>
+<logicalDatatype>LOGDT025</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_10_2_0" id="70D225F6-A94D-61B2-658B-5C4811F91027">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>tarea_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_0_0_0" id="A30D213A-B594-1747-6C52-F6C2CE09619C">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>tarea_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_20" id="B07E9921-EA75-D8A0-9953-BD8093CF38C4">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>20</dataTypeSize>
+<fileName>tarea_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_50" id="DDBD5A54-25F1-ED24-3953-EE0A147FAA49">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>50</dataTypeSize>
+<fileName>tarea_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_12" id="F9C4E1EB-4FCE-AF54-F9D8-5648CD86196A">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>12</dataTypeSize>
+<fileName>tarea_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+</domains>
+</DomainFile>

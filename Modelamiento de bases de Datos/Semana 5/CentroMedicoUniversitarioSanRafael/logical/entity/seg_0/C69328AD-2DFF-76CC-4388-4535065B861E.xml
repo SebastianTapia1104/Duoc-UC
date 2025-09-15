@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C69328AD-2DFF-76CC-4388-4535065B861E" name="INSTITUCION SALUD">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:50 UTC</createdTime>
+<generatorID>3E424BCC-DC15-2E76-E545-598CF0822C49</generatorID>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<engineerTo>
+<item key="4C4A55CB-2359-BE67-0C51-940E796A3713" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id isapre" id="01411BA2-222F-FCFB-642C-7806CD245824">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:50 UTC</createdTime>
+<generatorID>984BADE3-6D71-C173-A413-3DC534F1B89B</generatorID>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<engineerTo>
+<item key="4C4A55CB-2359-BE67-0C51-940E796A3713" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B1D8F2D1-419B-03B2-6305-F74E02F3720F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre isapre" id="19DCF1E9-5BF4-ABBE-F937-2453A6F1796E">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:50 UTC</createdTime>
+<generatorID>14F3D11F-E4BB-FA7B-3307-909D8FBBFB88</generatorID>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<engineerTo>
+<item key="4C4A55CB-2359-BE67-0C51-940E796A3713" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>7147EF64-687C-8AE3-25A4-D77EE001EB2B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="883D97AC-ED1B-7677-8D83-7A92E2F2437C" name="pk isapre">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:50 UTC</createdTime>
+<generatorID>FE7CC7CD-05BA-9784-3CFF-4B8B727FD635</generatorID>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<engineerTo>
+<item key="4C4A55CB-2359-BE67-0C51-940E796A3713" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>01411BA2-222F-FCFB-642C-7806CD245824</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="CentroMedicoUniversitarioSanRafael" id="670B7CD5-BFC6-9A35-B5B5-C9CEB2284540" version="3.5">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:11:59 UTC</createdTime>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>670B7CD5-BFC6-9A35-B5B5-C9CEB2284540</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="AFE3E9E3-E58C-0F05-C40E-1ADCAAF76B0C">
+<designStoragePath>C:\CentroMedicoUniversitarioSanRafael</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

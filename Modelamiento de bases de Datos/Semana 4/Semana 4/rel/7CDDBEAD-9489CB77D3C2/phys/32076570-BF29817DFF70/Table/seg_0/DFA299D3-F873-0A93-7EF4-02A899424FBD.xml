@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="Postulacion" directorySegmentName="seg_0" id="DFA299D3-F873-0A93-7EF4-02A899424FBD">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="nivel_idioma" id="0E5616E6-93CC-D5B3-72F6-243E3AEED38F">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="sigla_empresa_fk" id="1F7E657B-1D2F-F7D7-447A-26D8D1952220">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="folio_postulacion_id" id="20FDFCBD-0624-578B-0661-FEF108433410">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="fecha_postulacion" id="3D583194-96CE-EB45-56BA-551E5CCCC6B4">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="identificador_visa" id="4A875BD1-BCFF-1D6C-DE1A-EDCDC119A81B">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="pretension_renta" id="54A35E8F-CC85-2C6D-997D-B5AB24241569">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="folio_postulante_fk" id="9A96CDF5-24BD-F3C8-E2F3-FCFB10337DAC">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="fecha_visa" id="CDCEF47B-0967-04A0-ED5E-754036467CFF">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Postulacion_Empresa_FK" id="05D8235A-0743-6436-424F-330BBB088FD2">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Postulacion_Postulante_FK" id="E37E2476-3AD4-4C22-7B1A-AAD48E34D211">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Postulacion_PK" id="AE47583C-70C0-D1A6-B3F0-23BA52FB7AB6">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

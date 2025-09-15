@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="Postulante_Grado" directorySegmentName="seg_0" id="D60F67A7-719E-9CD5-C80C-CACD71A601D7">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="folio_postulante_fk" id="CAC79989-4D23-53AE-6AEF-DBDB9E3CAE5E">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_grado_fk" id="F4E2684E-A4C4-AD94-0BBE-8CCDF5911F25">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Postulante_Grado_Grado_Academico_FK" id="2BD81068-C0A5-99EA-C831-FE70623CA771">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Postulante_Grado_Postulante_FK" id="B3419B22-E988-0830-62F1-265E24194E30">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Postulante_Grado_PK" id="D5484623-1809-C120-8697-E7C4255D6634">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

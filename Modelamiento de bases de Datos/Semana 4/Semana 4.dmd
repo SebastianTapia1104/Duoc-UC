@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Semana 4" id="CD1436D7-61A1-E0AF-8C7F-04FF211F37E1" version="3.5">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:15:51 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>CD1436D7-61A1-E0AF-8C7F-04FF211F37E1</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="4846FA77-D567-2000-7324-BBCBC2C5D022">
+<designStoragePath>C:\tarea</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

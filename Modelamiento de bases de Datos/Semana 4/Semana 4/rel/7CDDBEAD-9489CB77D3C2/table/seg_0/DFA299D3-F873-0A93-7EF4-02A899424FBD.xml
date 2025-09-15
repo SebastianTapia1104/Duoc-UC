@@ -1,0 +1,154 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DFA299D3-F873-0A93-7EF4-02A899424FBD" name="Postulacion">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>54B658E6-D685-02C4-275C-E2D70994A97C</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="folio_postulacion_id" id="20FDFCBD-0624-578B-0661-FEF108433410">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>A431D921-59E8-C864-548B-506B292255F7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B07E9921-EA75-D8A0-9953-BD8093CF38C4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="folio_postulante_fk" id="9A96CDF5-24BD-F3C8-E2F3-FCFB10337DAC">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>9CE360EB-555E-706E-F116-156483D88955</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>16D9AD02-D79F-3D71-D8B5-0DEDBC578A0E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A502FB3C-D5A0-ACD2-DF4D-933451558076" referredColumn="16AA913D-BC5B-7D1D-4E61-6EF17377E811"/>
+</associations>
+</Column>
+<Column name="sigla_empresa_fk" id="1F7E657B-1D2F-F7D7-447A-26D8D1952220">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>64DF8C4E-787B-C88C-49E0-9E64C34023E4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>16D9AD02-D79F-3D71-D8B5-0DEDBC578A0E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9A1CB554-6B99-5389-116D-B4CEC2353D21" referredColumn="3F39D34D-8DEB-813A-AF8E-1295BE619667"/>
+</associations>
+</Column>
+<Column name="fecha_postulacion" id="3D583194-96CE-EB45-56BA-551E5CCCC6B4">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>12F1FDE6-B571-9E00-9A4B-B1B6F74ADC56</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>0ADD6DCC-EFDF-0539-570F-C0F7B0E40C89</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pretension_renta" id="54A35E8F-CC85-2C6D-997D-B5AB24241569">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>85837E19-451A-7627-97FF-6C6B714F7200</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>70D225F6-A94D-61B2-658B-5C4811F91027</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nivel_idioma" id="0E5616E6-93CC-D5B3-72F6-243E3AEED38F">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>F6982ED1-8197-371D-038C-FAA3DBDA74D5</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>DDBD5A54-25F1-ED24-3953-EE0A147FAA49</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_visa" id="CDCEF47B-0967-04A0-ED5E-754036467CFF">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>47993B4F-DB11-C6A2-E64D-5BC0A9391495</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>0ADD6DCC-EFDF-0539-570F-C0F7B0E40C89</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="identificador_visa" id="4A875BD1-BCFF-1D6C-DE1A-EDCDC119A81B">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>89F133BA-5265-4F5B-EBE0-FB3BC15E284D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>50D91295-A812-2FBB-9342-BE637A80C3FE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AE47583C-70C0-D1A6-B3F0-23BA52FB7AB6" name="Postulacion_PK">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>F9909CA2-7A37-FC1E-3508-490985408A46</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20FDFCBD-0624-578B-0661-FEF108433410"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="05D8235A-0743-6436-424F-330BBB088FD2" name="Postulacion_Empresa_FK">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F7E657B-1D2F-F7D7-447A-26D8D1952220"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E37E2476-3AD4-4C22-7B1A-AAD48E34D211" name="Postulacion_Postulante_FK">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9A96CDF5-24BD-F3C8-E2F3-FCFB10337DAC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

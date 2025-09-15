@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2AA1D6A9-0115-242F-CB50-87849D0ECD8C" name="Postulante_Grado">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:21:06 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="folio_postulante" id="810C13DA-A3BE-8383-86A2-9A07FE7C5D8D">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:44:16 UTC</createdTime>
+<generatorID>70A16C14-FF4A-D0B7-8528-798BA9415B4E</generatorID>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<referedAttribute>23D31E8B-54A7-7A74-4C8A-2067DD9DEC41</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_grado" id="201FD197-E4D9-7983-3367-BE2FA9210E05">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:45:12 UTC</createdTime>
+<generatorID>7FB78F50-DE89-1F14-413D-6395136D506B</generatorID>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<referedAttribute>8235C96D-0C6C-D15C-C2E6-7E62EE83E829</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2B24670A-75F1-D685-21F7-8FC72A61EB60" name="Postulante_Grado PK">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:45:39 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>810C13DA-A3BE-8383-86A2-9A07FE7C5D8D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B46FE6CA-6EF4-EAA3-43A8-881B4D831E99" name="Profesion">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>140F22CB-7FBE-BB1B-0BB9-87101A837CC2</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_profesion" id="4550D631-8295-3209-E3B4-0FD45EE849D4">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>B3A7E1D9-DC31-EC3F-43C3-E28F52F1FD13</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A30D213A-B594-1747-6C52-F6C2CE09619C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_profesion" id="CF7F8ED3-3E1D-1546-6A0A-C7144BBA0F05">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>3ED26634-898D-A91D-E89F-58555488F900</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>5F5C3987-4503-E97B-57FA-23C64C04D77D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4A3AFF14-8406-1458-AF8A-476F1E33CA93" name="Profesion_PK">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>1302D9F8-DE15-1201-C72E-6BBEBAC3D960</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4550D631-8295-3209-E3B4-0FD45EE849D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1F212010-D474-8B0D-0543-3CB29FBBDA45" name="INDEX_1v2">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>DB291FE0-D411-DB3B-C042-D91A89F2072E</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CF7F8ED3-3E1D-1546-6A0A-C7144BBA0F05"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

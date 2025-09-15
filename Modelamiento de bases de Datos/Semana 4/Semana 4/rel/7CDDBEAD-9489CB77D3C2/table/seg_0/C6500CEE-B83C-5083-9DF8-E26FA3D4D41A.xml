@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C6500CEE-B83C-5083-9DF8-E26FA3D4D41A" name="Postulante_Profesion">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>87187C50-943C-2E7C-6C88-055E965993F9</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="folio_postulante_fk" id="FCCB7160-5449-A38E-8680-A1E0C41F9BDE">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>1E78FCE9-6D03-4E0C-0149-84512BD86D3C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>16D9AD02-D79F-3D71-D8B5-0DEDBC578A0E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A992C3AB-3BF0-C542-9EBA-0231EEAC0352" referredColumn="16AA913D-BC5B-7D1D-4E61-6EF17377E811"/>
+</associations>
+</Column>
+<Column name="id_profesion_fk" id="BDD0EFFF-1BA8-98F2-C8E0-2CC7FCD98468">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>1B4275FF-B8EB-6291-7716-4FBCB487AECB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A30D213A-B594-1747-6C52-F6C2CE09619C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="804EB19B-88CE-96A3-D9EA-AA18F5BF866E" referredColumn="4550D631-8295-3209-E3B4-0FD45EE849D4"/>
+</associations>
+</Column>
+<Column name="fecha_obtencion" id="207E4E65-265E-F612-4F74-7BC2B726AC0E">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>B6FFAA0F-01FE-A133-DA64-670A11D35971</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>0ADD6DCC-EFDF-0539-570F-C0F7B0E40C89</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AB75E744-EB7E-CC2B-53EE-096B863168E0" name="Postulante_Profesion_PK">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>C89316D0-C079-10EB-97DB-7677F8B0DB1D</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FCCB7160-5449-A38E-8680-A1E0C41F9BDE"/>
+<colUsage columnID="BDD0EFFF-1BA8-98F2-C8E0-2CC7FCD98468"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A637C527-3809-1A12-376E-4734A78CE75D" name="Postulante_Profesion_Postulante_FK">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FCCB7160-5449-A38E-8680-A1E0C41F9BDE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="719C508E-42AE-70ED-BD48-C47340368352" name="Postulante_Profesion_Profesion_FK">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BDD0EFFF-1BA8-98F2-C8E0-2CC7FCD98468"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

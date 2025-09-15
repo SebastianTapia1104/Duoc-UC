@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_atencion_medico" directorySegmentName="seg_0" id="8F4C6812-6680-3FD6-728F-4BB22CB1412C">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:50 UTC</createdTime>
+<generatorID>52E17BE3-9E54-A918-6B75-6E5FACE4B937</generatorID>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<engineerTo>
+<item key="4C4A55CB-2359-BE67-0C51-940E796A3713" value="true"/>
+</engineerTo>
+<sourcePk>D1395183-F30A-7D3E-C407-80718A09821D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8EE1A0F1-3414-0DB5-7DC0-776BE83549F8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>91FF1014-3862-22DC-3EF7-B04978B60FF8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

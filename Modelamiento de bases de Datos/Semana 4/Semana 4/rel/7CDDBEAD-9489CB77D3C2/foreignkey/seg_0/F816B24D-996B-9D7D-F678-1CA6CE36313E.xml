@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F816B24D-996B-9D7D-F678-1CA6CE36313E" containerWithKeyObject="D60F67A7-719E-9CD5-C80C-CACD71A601D7" localFKIndex="B3419B22-E988-0830-62F1-265E24194E30" name="Postulante_Grado_Postulante_FK">
+<sourceDDLFile>tarea.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 03:17:40 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<importedID>8A61E136-E8C1-34CF-735A-6647C4FFEBC7</importedID>
+<referredTableLongName>Postulante</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A44FB7B9-913C-CEE8-0657-788DB112FF1D</referredTableID>
+<keyObject>7F5D14A1-9799-0D32-5F5F-A13480DEDD81</keyObject>
+<referredKeyID>7F5D14A1-9799-0D32-5F5F-A13480DEDD81</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>folio_postulante</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,229 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="809DEAE0-E672-C1EC-B300-3F589883770A" name="Postulante">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:59:26 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="folio_postulante" id="23D31E8B-54A7-7A74-4C8A-2067DD9DEC41">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:59:30 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombres" id="A2311536-AECA-4F0D-B29F-787DFA27BFFD">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:59:30 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellidos" id="6EDEDFDE-A43D-E0AE-F59E-4752FE09ADD9">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:59:30 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="genero" id="A8690C3E-EE68-5F47-EF1C-B371C3474E61">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:59:30 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_nacimento" id="58B39FA2-04A1-F67B-C32C-5644F1E43FBA">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:59:30 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pais_origen" id="A1429A6D-5C56-4EA6-1DBA-B0DF7CF4F9FF">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:59:30 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion_chile" id="3C3EC10B-9E29-6417-89BC-47152E6B8951">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 21:59:30 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="9C9543CB-D996-5FDC-96A7-5D9D74B967F1">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:02:49 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado_civil" id="002E70AF-14B2-FB4D-96D9-960010A6756B">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:06:06 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="renta_actual" id="ADE74132-ED7D-2401-D74B-3A11CBAFF8A7">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:06:22 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sitio_web" id="13F46A6C-4303-71A0-CEE5-FE256F376EB1">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:07:58 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rut_chileno" id="4DA42313-F95B-2E69-E041-537CD114FFC8">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:08:11 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A8750267-3A28-80B5-DF94-4F10CA46691E" name="email">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:03:11 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<newElementsIDs>9C9543CB-D996-5FDC-96A7-5D9D74B967F1</newElementsIDs>
+<usedAttributes>
+<attributeRef>9C9543CB-D996-5FDC-96A7-5D9D74B967F1</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="18C967F0-D251-8896-F3D2-328C9B51AEDC" name="Postulante PK">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:03:37 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>23D31E8B-54A7-7A74-4C8A-2067DD9DEC41</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="A7B8E2F4-448A-71B8-D25B-D915303C6675" name="sitio_web">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:08:26 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<newElementsIDs>13F46A6C-4303-71A0-CEE5-FE256F376EB1</newElementsIDs>
+<usedAttributes>
+<attributeRef>13F46A6C-4303-71A0-CEE5-FE256F376EB1</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="68586D0B-721E-B9C9-1799-DDECD512E8A6" name="rut_chileno">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:08:53 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<newElementsIDs>4DA42313-F95B-2E69-E041-537CD114FFC8,23D31E8B-54A7-7A74-4C8A-2067DD9DEC41</newElementsIDs>
+<usedAttributes>
+<attributeRef>4DA42313-F95B-2E69-E041-537CD114FFC8</attributeRef>
+<attributeRef>23D31E8B-54A7-7A74-4C8A-2067DD9DEC41</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

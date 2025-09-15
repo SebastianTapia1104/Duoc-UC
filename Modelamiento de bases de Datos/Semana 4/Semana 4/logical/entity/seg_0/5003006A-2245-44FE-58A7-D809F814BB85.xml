@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5003006A-2245-44FE-58A7-D809F814BB85" name="Postulante_Profesion">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:12:36 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="folio_postulante" id="59044FF0-EB93-50D9-6DA7-76CD9F879BBD">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:43:50 UTC</createdTime>
+<generatorID>941A43BE-A4D4-FA2E-60DC-E320E4386A35</generatorID>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<referedAttribute>23D31E8B-54A7-7A74-4C8A-2067DD9DEC41</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_profesion" id="B4315A35-13FE-D279-5795-2E733D48AAA0">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:44:53 UTC</createdTime>
+<generatorID>F3D009AB-9335-A360-8F28-6B3C3F6CE02E</generatorID>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<referedAttribute>99C7980D-3F18-3551-5E0E-9DD01107E79C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_obstension" id="B346D732-9BCC-5036-D4EA-D0653076C2E9">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:12:59 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

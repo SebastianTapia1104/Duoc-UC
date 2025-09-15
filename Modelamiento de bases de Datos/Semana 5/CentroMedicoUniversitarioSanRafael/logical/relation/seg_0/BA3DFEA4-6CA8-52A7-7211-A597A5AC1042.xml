@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_comuna_region" directorySegmentName="seg_0" id="BA3DFEA4-6CA8-52A7-7211-A597A5AC1042">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-12 23:14:50 UTC</createdTime>
+<generatorID>E332AEF4-CEBE-3596-0C95-181744A08D4B</generatorID>
+<ownerDesignName>CentroMedicoUniversitarioSanRafael</ownerDesignName>
+<engineerTo>
+<item key="4C4A55CB-2359-BE67-0C51-940E796A3713" value="true"/>
+</engineerTo>
+<sourcePk>6D05E921-A36A-8568-C984-D2BAAB94DA91</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>914C3A40-33D1-C0B9-7C40-4210E0356C60</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3E8CE2F6-3A70-AAFD-3977-DC8B5DF452F3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

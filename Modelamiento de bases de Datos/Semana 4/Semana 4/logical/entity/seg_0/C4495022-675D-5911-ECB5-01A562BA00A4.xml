@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C4495022-675D-5911-ECB5-01A562BA00A4" name="Grado_Academico">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:39:48 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_grado" id="8235C96D-0C6C-D15C-C2E6-7E62EE83E829">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:39:48 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre_grado" id="EC5B98A5-B6AC-2B78-ADAD-DCA988161B62">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:39:48 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BEBA21CE-9878-67A5-FDC5-C11EDAD07892" name="Profesion PK">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:39:48 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8235C96D-0C6C-D15C-C2E6-7E62EE83E829</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="08085B55-5726-E03F-BF27-36A74264C9C5" name="nombre_profesion">
+<createdBy>Seba</createdBy>
+<createdTime>2025-09-08 22:39:48 UTC</createdTime>
+<ownerDesignName>Semana 4</ownerDesignName>
+<engineerTo>
+<item key="7CDDBEAD-3ACC-AD00-437F-9489CB77D3C2" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>EC5B98A5-B6AC-2B78-ADAD-DCA988161B62</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
