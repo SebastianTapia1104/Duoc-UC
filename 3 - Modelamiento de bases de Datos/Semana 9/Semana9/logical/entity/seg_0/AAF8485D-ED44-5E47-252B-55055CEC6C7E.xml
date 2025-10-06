@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AAF8485D-ED44-5E47-252B-55055CEC6C7E" name="AFP">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>75FA5507-283C-658A-8EE8-3E57033D0A04</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id afp" id="FFADB7AE-8209-4188-1DCE-7B19AE4E978A">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>9BC35942-17B5-71D1-B499-F85ADCD7A553</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>458F6CA2-76EC-A370-7C8E-A8E0B48D8369</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre afp" id="BBBDDDA5-A751-21C4-8657-848CE6201830">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>6C19F01A-5C6B-1EAE-491D-A52C63F53A63</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>735A4916-4405-37C7-E35A-C116CA6B2977</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F176399B-1BF5-5EF8-8C8D-63E7D9B019AB" name="PK AFP">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>EBF17BF1-1C23-69EF-E0A3-7C26FC0B5BEB</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FFADB7AE-8209-4188-1DCE-7B19AE4E978A</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="77237529-12E5-56A9-436D-6F61818439A2" name="UN AFP NOMBRE">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>123859FB-FBE5-2960-F6AE-08883C1F6CA2</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>BBBDDDA5-A751-21C4-8657-848CE6201830</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

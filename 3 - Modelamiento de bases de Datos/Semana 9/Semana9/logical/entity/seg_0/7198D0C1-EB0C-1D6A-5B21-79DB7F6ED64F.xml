@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7198D0C1-EB0C-1D6A-5B21-79DB7F6ED64F" name="ASIGNACION TURNO">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>AA1ADD25-9AD1-CFDA-5778-EE5EDB00A55B</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cod empleado" id="2383AE57-D5CE-6B24-D81D-371B4E53BF90">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>2D0F5283-92B8-A7BA-64B4-48F7B39B0ABD</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<referedAttribute>314272BB-ADB2-D84A-6B85-B3F32868BDD1</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>76962787-B6C7-5900-C884-B22F7768A861</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cod maquina" id="309F27A1-62DA-ED39-E032-2E27FA5E9ED2">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>56098107-A33F-C3D7-640A-DFE7056CC8CD</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<referedAttribute>69A427D1-4DFA-BF81-6741-4FC349D17D22</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3723222E-D8DA-6812-0750-414FE63A0505</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cod planta" id="C0C16C90-693E-1E00-6693-368914255156">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>56098107-A33F-C3D7-640A-DFE7056CC8CD</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<referedAttribute>8DB97A70-698A-5200-48A1-C42156BF03B9</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>458F6CA2-76EC-A370-7C8E-A8E0B48D8369</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cod turno" id="F53532AD-BE7B-7862-D28C-A519DC4909C1">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>A5F75E6F-DFE2-A07E-C726-AEFEFBE094C9</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<referedAttribute>C1B97942-02D5-87AD-DC9A-4F1F680C0647</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>77048F9B-E21B-1DB6-9AC8-1861F2C5D99B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha asignacion" id="C620DDCB-920C-C6F5-A962-0FE15EE1A8E8">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>B0A83CEF-CD89-110B-4969-55656E3CB29C</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>09B91547-AA98-8038-6AEF-46D2C5D0CBD8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rol desempeñado" id="E5F4AC3F-2CE2-8E68-B93E-8D637E1AA483">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>4B22BD53-AB06-4E5A-4C06-50D550BA5888</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>808C5DEC-CB15-9D38-2A9F-A16EBFA2D85C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9872CFCB-5213-B39E-B1A0-9706D56864D4" name="PK ASIGNACION">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>577D2714-3C87-6BB1-448E-5F73C14C41B2</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2383AE57-D5CE-6B24-D81D-371B4E53BF90</attributeRef>
+<attributeRef>C620DDCB-920C-C6F5-A962-0FE15EE1A8E8</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="85A55AB5-4B72-39FF-A1DB-2E36C68A2EBA" name="UN ASIG MAQ TURNO">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>1275B2B2-3813-5580-E95B-6012B3BEE103</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>309F27A1-62DA-ED39-E032-2E27FA5E9ED2</attributeRef>
+<attributeRef>C0C16C90-693E-1E00-6693-368914255156</attributeRef>
+<attributeRef>C620DDCB-920C-C6F5-A962-0FE15EE1A8E8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

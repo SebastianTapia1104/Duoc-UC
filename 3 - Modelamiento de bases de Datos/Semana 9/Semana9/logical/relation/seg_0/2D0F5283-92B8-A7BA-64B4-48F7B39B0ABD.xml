@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_ASIG_EMP" directorySegmentName="seg_0" id="2D0F5283-92B8-A7BA-64B4-48F7B39B0ABD">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>5E948B45-6B2F-3A9D-7156-EE694EB35E7C</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<sourcePk>B6967A9B-A9F1-E0C1-E0C0-EDC1A8DA2C6F</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>775E721C-A4BB-D095-2756-887508A75934</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>7198D0C1-EB0C-1D6A-5B21-79DB7F6ED64F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

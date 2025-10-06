@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="TIPO_MAQUINA" directorySegmentName="seg_0" id="0E4B3540-4673-12FE-7644-8E8BDFAA6407">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="id_tipo" id="3CE5D113-55CC-33E9-9809-D7B5357CB6B2">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nombre_tipo" id="DFBF4177-E5E3-4F38-27FA-541A24CD0054">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_TIPO_MAQUINA" id="F340B22F-BB91-E84F-5A5C-41EEAF720738">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="UN_TIPO_MAQUINA_NOMBRE" id="47888D32-80F8-1BE7-845A-BA21290212FC">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

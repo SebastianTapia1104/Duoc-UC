@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="REGION" directorySegmentName="seg_0" id="2D9B94C5-749C-4F5B-21DF-4CC18D054FF7">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="id_region" id="3D501B87-F731-EE92-AC63-5E6EB135DF28">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nombre_region" id="55CE6432-F032-7628-A6A8-4C1220455704">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_REGION" id="4E32B301-15F1-3B29-1923-2DAFB19C830E">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="UN_REGION_NOMBRE" id="A71DEB32-BDB3-351B-278D-D73ECBCC49E1">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

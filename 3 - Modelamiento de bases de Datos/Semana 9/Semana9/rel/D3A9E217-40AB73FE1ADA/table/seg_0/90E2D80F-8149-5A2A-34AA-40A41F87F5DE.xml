@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="90E2D80F-8149-5A2A-34AA-40A41F87F5DE" name="TURNO">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>43F82568-EA26-E8C1-9FEF-001F0C9269BC</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_turno" id="26280B80-13FB-2612-D3C2-B089459C3848">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>EDBBA2D3-5B7C-61A5-4334-39B09DCDC180</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>77048F9B-E21B-1DB6-9AC8-1861F2C5D99B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_turno" id="F426A8D3-0268-100B-DBAA-FBC3F28E225F">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>EE2A620F-3464-4F8D-FEA6-E82A1BC6F484</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>735A4916-4405-37C7-E35A-C116CA6B2977</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hora_inicio" id="CBE5FA4D-BBE6-5974-8F7B-F7E1287AE052">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>957B9246-5B18-FED5-9019-352632FD41C5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>186102F1-37B6-2CE0-B64E-E48B87F0F88D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hora_fin" id="2A1DF55F-B8A5-4ED4-7142-911425C8D12D">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>BD4A7A57-0DAA-F873-1B0F-14AA5DF0DC30</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>186102F1-37B6-2CE0-B64E-E48B87F0F88D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="72230C3B-C28D-9ACD-DC21-DA995E21D0CD" name="PK_TURNO">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>ADAF38EF-EE8B-1E41-33FA-0A25521EB4D6</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26280B80-13FB-2612-D3C2-B089459C3848"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C9425A70-2D80-15C0-F69B-54F08424CDD7" name="UN_TURNO_NOMBRE">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>400226F5-5DC2-CD67-7C47-B6C81ECE1515</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F426A8D3-0268-100B-DBAA-FBC3F28E225F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

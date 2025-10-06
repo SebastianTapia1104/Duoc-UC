@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FDF41524-78C8-30D3-2DD4-CA1A21F1B109" name="ORDEN MANTENCION">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>333AE6B8-1CB9-FF8F-9B05-113AB5335D87</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id orden" id="56A0165D-1101-6275-A892-D9C045E0A8DC">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>C9086AB7-91A9-C4D4-78B5-FD3D408700DC</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8E00431B-5AFE-E4ED-873E-C5720D4262EB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cod maquina" id="9B52B491-5468-25E1-C905-019B808E34BE">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>1265C2EF-8D6B-00E1-7C4A-9D14FF7C2168</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<referedAttribute>69A427D1-4DFA-BF81-6741-4FC349D17D22</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3723222E-D8DA-6812-0750-414FE63A0505</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cod planta" id="43E9B43A-DCF8-3465-976E-AD19E68753EF">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>1265C2EF-8D6B-00E1-7C4A-9D14FF7C2168</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<referedAttribute>8DB97A70-698A-5200-48A1-C42156BF03B9</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>458F6CA2-76EC-A370-7C8E-A8E0B48D8369</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cod tecnico" id="C8CE03FE-08E7-3A61-2241-5C87D9110662">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>08CD6773-397D-6F42-93E8-EB1C15B08399</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<referedAttribute>F9360F7A-31FA-0348-57AB-938EC562A560</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>76962787-B6C7-5900-C884-B22F7768A861</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha programada" id="36FD325D-DACA-100D-EEA7-8FB3B8C00FFE">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>08C2CE89-8714-3A0E-562D-ED60F362757C</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>09B91547-AA98-8038-6AEF-46D2C5D0CBD8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha ejecucion" id="66102FCA-6CBA-7AA8-9DC1-DEE3F7E3ED87">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>710A00FE-5FB0-6364-95CD-C8258D6F4FFA</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>09B91547-AA98-8038-6AEF-46D2C5D0CBD8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="DF2E4658-248E-C092-59A7-A9F5839BBD81">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>AC7E3946-E63A-3307-F6DB-2B2C1C742F18</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>81EA716C-676B-9748-C94E-45F6A6C0CA5A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E8152364-DDA4-D683-F8F8-5ADB246AD480" name="PK ORDEN MANT">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>32BD7C9E-09A9-07CE-14B0-4DEADE8E8A88</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>56A0165D-1101-6275-A892-D9C045E0A8DC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

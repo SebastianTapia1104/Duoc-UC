@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4E252E22-9612-846E-BF34-00B67CCF4ACB" name="MAQUINA">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>D09D1C68-59AB-834B-DEA1-9EF0C79DE675</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="num_maquina" id="F7505409-70AC-10C9-32EB-79ED97B64F9E">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>53D68A4E-2588-45BD-3601-1AB48CBF4B2F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3723222E-D8DA-6812-0750-414FE63A0505</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cod_planta" id="CA10F44B-8F2C-66FA-970C-9A9014333E1A">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>E01956E8-785B-AB74-054D-DDC73A6334B6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>458F6CA2-76EC-A370-7C8E-A8E0B48D8369</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8BF973AD-1A16-E30B-4E8D-EA4120D64DEF" referredColumn="6A6E9370-C0FD-1103-1BE4-68F32D2C3BD8"/>
+</associations>
+</Column>
+<Column name="nombre_maquina" id="66D672DF-40A2-455A-2ECA-05E3D229910B">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>6C2273E0-1F7D-6A00-AEFB-FC31FBA387E6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>808C5DEC-CB15-9D38-2A9F-A16EBFA2D85C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado_activo" id="3E2F3394-15DF-95CA-2D05-9ADE19A4DA27">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>B35B6BDB-A501-709D-54AA-503FE5F74D21</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>2D5E4671-03F4-0959-A185-47E871B982D9</domain>
+<defaultValue>&apos;S&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cod_tipo" id="C0CB2645-0341-B386-97B4-4F0E75D58F06">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>2265E622-CABC-4D3D-E974-BA8BB36659C0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>458F6CA2-76EC-A370-7C8E-A8E0B48D8369</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="344D434E-D6ED-FB4D-67E0-D0A62CF218F2" referredColumn="3CE5D113-55CC-33E9-9809-D7B5357CB6B2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E840D175-AB3C-A346-DA2A-2CC33AE90685" name="PK_MAQUINA">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>0505A591-BFCA-0AC4-B582-5899D4CA4FC6</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F7505409-70AC-10C9-32EB-79ED97B64F9E"/>
+<colUsage columnID="CA10F44B-8F2C-66FA-970C-9A9014333E1A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="89A25ACA-4D7C-FB37-5B86-CA451EFC0305" name="UN_MAQUINA_NOMBRE">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>613D8064-1238-1659-0F2B-1C15DEA21DCC</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66D672DF-40A2-455A-2ECA-05E3D229910B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0BD43AA0-8A99-4B38-F2E0-C76FFA81AC4A" name="FK_MAQUINA_PLANTA">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA10F44B-8F2C-66FA-970C-9A9014333E1A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="21E179B3-3C64-FB62-57CE-C930DFC10A78" name="FK_MAQUINA_TIPO">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C0CB2645-0341-B386-97B4-4F0E75D58F06"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CK_MAQUINA_ESTADO" directorySegmentName="seg_0" id="35814CA6-8725-DA82-19E8-515C2A335208">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>36095613-48DC-ECAF-0116-7391D76A7C20</importedID>
+<rule><![CDATA[estado_activo IN ('S', 'N')]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

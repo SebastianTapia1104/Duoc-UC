@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_EMP_SIS_SALUD" directorySegmentName="seg_0" id="1995D947-69D4-0CC1-165C-C51D37BC60EB">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>02609BF6-350A-3218-1462-D3ED019790C6</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<sourcePk>3892CCCE-99BA-E5D9-294E-590B35260360</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B83FB6E7-B9F3-ABC7-F569-427BDAE88025</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>775E721C-A4BB-D095-2756-887508A75934</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

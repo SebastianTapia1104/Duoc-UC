@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F6163F89-F332-7245-D9A5-6FAB43E1B65A" name="TECNICO">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>3FD5B128-A6F5-D380-E2E9-BAA8C7CA8AB2</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_empleado" id="4F9641D8-666F-2F39-CC87-2880609491A0">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>DBB16F1C-95AC-6AE0-9626-3F6134B45FC1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>76962787-B6C7-5900-C884-B22F7768A861</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7DB5C2EC-0DC1-750B-7A32-73AA71661716" referredColumn="29A4103C-AA2F-016B-8851-FA84EB69EBBC"/>
+</associations>
+</Column>
+<Column name="cod_especialidad" id="5021E8FA-E0E8-1E56-DD21-A6217E93A1D0">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>E6DD78A9-8ED6-D74B-7FB7-48097E7363D7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>458F6CA2-76EC-A370-7C8E-A8E0B48D8369</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7548E916-A8EB-2EDA-3C63-22E3006E7CB2" referredColumn="50AFED61-B588-81DE-DFBC-3DB5B7C35776"/>
+</associations>
+</Column>
+<Column name="nivel_certificacion" id="A5F270A1-F01A-600A-99DB-73D0ADD0CC14">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>329A4B63-6FB7-1997-91F0-F068533219C2</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>735A4916-4405-37C7-E35A-C116CA6B2977</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tiempo_respuesta_estandar" id="35E24F21-FD1B-F1F0-8EA4-759C9817E45F">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>C92AB902-5932-2295-DB8E-2162819B1856</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>181068AD-DD53-E49F-98F7-1759804471BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F376BBFF-0259-15B9-7CF1-489E751B431F" name="PK_TECNICO">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>E7E7AFF2-F114-C173-8CD3-27D5BC00C42D</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F9641D8-666F-2F39-CC87-2880609491A0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9FAC341D-EDD6-4D00-27DA-0A478D3A46C3" name="FK_TECNICO_EMP">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F9641D8-666F-2F39-CC87-2880609491A0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1E620A73-0E75-E9D1-1F8F-5AC40E84342D" name="FK_TECNICO_ESP">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5021E8FA-E0E8-1E56-DD21-A6217E93A1D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="89FF836F-F6A1-06CC-C420-6AF77CDF1D6D" containerWithKeyObject="AA1ADD25-9AD1-CFDA-5778-EE5EDB00A55B" localFKIndex="1C581B25-AE16-514D-8265-85F170928BC0" name="FK_ASIG_TURNO">
+<sourceDDLFile>S9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:43:30 UTC</createdTime>
+<ownerDesignName>Semana9</ownerDesignName>
+<importedID>A007CB72-ACCA-B623-7942-D8F7377E4659</importedID>
+<referredTableLongName>TURNO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>90E2D80F-8149-5A2A-34AA-40A41F87F5DE</referredTableID>
+<keyObject>72230C3B-C28D-9ACD-DC21-DA995E21D0CD</keyObject>
+<referredKeyID>72230C3B-C28D-9ACD-DC21-DA995E21D0CD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_turno</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

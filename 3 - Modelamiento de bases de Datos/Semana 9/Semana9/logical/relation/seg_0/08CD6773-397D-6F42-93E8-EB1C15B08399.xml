@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_ORDEN_TECNICO" directorySegmentName="seg_0" id="08CD6773-397D-6F42-93E8-EB1C15B08399">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-05 23:46:18 UTC</createdTime>
+<generatorID>56143C9F-71E6-B353-7F9E-58DFA8D6D8BA</generatorID>
+<ownerDesignName>Semana9</ownerDesignName>
+<engineerTo>
+<item key="D3A9E217-50CC-36FC-85D7-40AB73FE1ADA" value="true"/>
+</engineerTo>
+<sourcePk>FE68FFCD-70C6-BA5B-9818-0BB6165115F2</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>246F3173-6AAF-874D-9210-B9F4D7979FA3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>FDF41524-78C8-30D3-2DD4-CA1A21F1B109</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
