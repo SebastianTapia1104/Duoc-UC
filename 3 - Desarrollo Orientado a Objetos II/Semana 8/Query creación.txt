@@ -1,0 +1,31 @@
+-- Parte 1: Creación de la base de datos y la tabla
+
+-- Crear la base de datos si no existe
+CREATE DATABASE IF NOT EXISTS Cine_DB;
+
+-- Usar la base de datos recién creada
+USE Cine_DB;
+
+-- Crear la tabla 'Cartelera'
+CREATE TABLE IF NOT EXISTS Cartelera (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(150) NOT NULL,
+    director VARCHAR(50),
+    anio INT NOT NULL,
+    duracion INT,
+    genero VARCHAR(50),
+    CHECK (genero IN ('Comedia', 'Drama', 'Accion', 'Ciencia ficcion', 'Terror', 'Animacion', 'Aventura', 'Musical'))
+);
+
+
+-- Parte 2: Inserción de datos de ejemplo
+
+-- Insertar una película para cada género
+INSERT INTO Cartelera (titulo, director, anio, duracion, genero) VALUES
+('Supercool', 'Greg Mottola', 2007, 113, 'Comedia'),
+('El Padrino', 'Francis Ford Coppola', 1972, 175, 'Drama'),
+('Duro de matar', 'John McTiernan', 1988, 132, 'Accion'),
+('Interestelar', 'Christopher Nolan', 2014, 169, 'Ciencia ficcion'),
+('El Conjuro', 'James Wan', 2013, 112, 'Terror'),
+('El rey león', 'Roger Allers', 1994, 88, 'Animacion'),
+('Parque Jurásico', 'Steven Spielberg', 1993, 127, 'Aventura');
