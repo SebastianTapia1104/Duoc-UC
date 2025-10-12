@@ -1,4 +1,3 @@
-// package com.sebatapia.computec.controladores;
 package com.sebatapia.computec.controladores;
 
 import com.sebatapia.computec.modelos.Venta;
@@ -13,9 +12,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Controlador: Gestiona la lógica de negocio para registrar ventas y generar reportes.
- */
 public class VentaControlador {
 
     private final Connection connection;
@@ -24,11 +20,6 @@ public class VentaControlador {
         this.connection = DatabaseConnection.getInstance().getConnection();
     }
 
-    /**
-     * Registra una nueva venta en la base de datos.
-     * @param venta El objeto Venta a guardar, que contiene el Cliente y el Equipo.
-     * @return true si el registro fue exitoso, false en caso contrario.
-     */
     public boolean registrarVenta(Venta venta) {
         String sql = "{CALL sp_registrarVenta(?, ?, ?, ?)}";
         try (CallableStatement stmt = connection.prepareCall(sql)) {
@@ -45,11 +36,6 @@ public class VentaControlador {
         }
     }
 
-    /**
-     * Genera el reporte de equipos vendidos, con un filtro opcional por tipo.
-     * @param tipoEquipoFiltro "Todos", "Laptop" o "Desktop" para filtrar el reporte.
-     * @return Una lista de arrays de objetos, ideal para llenar un JTable.
-     */
     public List<Object[]> generarReporteVentas(String tipoEquipoFiltro) {
         List<Object[]> reporte = new ArrayList<>();
         String sql = "{CALL sp_reporteVentas(?)}";
@@ -74,10 +60,6 @@ public class VentaControlador {
         return reporte;
     }
 
-    /**
-     * Obtiene estadísticas globales de ventas: cantidad total y monto recaudado.
-     * @return Un mapa con las claves "total_ventas" y "monto_total".
-     */
     public Map<String, Object> obtenerEstadisticasVentas() {
         Map<String, Object> estadisticas = new HashMap<>();
         String sql = "{CALL sp_estadisticasVentas()}";

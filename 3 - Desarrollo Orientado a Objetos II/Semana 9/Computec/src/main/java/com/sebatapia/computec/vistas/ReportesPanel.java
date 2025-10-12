@@ -1,10 +1,8 @@
-// package com.sebatapia.computec.vistas;
 package com.sebatapia.computec.vistas;
 
 import com.sebatapia.computec.controladores.VentaControlador;
 
 import javax.swing.*;
-import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import java.awt.*;
@@ -12,10 +10,6 @@ import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Panel para visualizar el reporte de ventas.
- * Permite filtrar los resultados y buscar dentro de ellos.
- */
 public class ReportesPanel extends JPanel {
 
     private final VentaControlador ventaControlador;
@@ -40,9 +34,6 @@ public class ReportesPanel extends JPanel {
         generarReporte();
     }
 
-    /**
-     * Crea el panel superior que contiene los controles de filtro.
-     */
     private JPanel crearPanelFiltros() {
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panel.setBorder(BorderFactory.createTitledBorder("Filtros del Reporte"));
@@ -76,9 +67,6 @@ public class ReportesPanel extends JPanel {
         return panel;
     }
 
-    /**
-     * Crea el panel central que contiene la tabla de resultados.
-     */
     private JPanel crearPanelTabla() {
         JPanel panel = new JPanel(new BorderLayout());
         String[] columnas = {"Modelo Equipo", "Nombre Cliente", "Teléfono", "Correo", "Precio Venta"};
@@ -101,10 +89,6 @@ public class ReportesPanel extends JPanel {
         return panel;
     }
 
-    /**
-     * Llama al controlador para obtener los datos de la BD según el filtro
-     * y actualiza la tabla.
-     */
     public void generarReporte() {
         String tipoFiltro = (String) comboTipoEquipo.getSelectedItem();
         
@@ -125,16 +109,11 @@ public class ReportesPanel extends JPanel {
         }
     }
 
-    /**
-     * Aplica un filtro de texto a los datos ya cargados en la tabla.
-     * No realiza una nueva consulta a la base de datos.
-     */
     private void filtrarTablaLocalmente() {
         String texto = txtBusquedaRapida.getText();
         if (texto.trim().length() == 0) {
             sorter.setRowFilter(null);
         } else {
-            // El "(?i)" hace que la búsqueda no distinga mayúsculas de minúsculas
             sorter.setRowFilter(RowFilter.regexFilter("(?i)" + texto));
         }
     }

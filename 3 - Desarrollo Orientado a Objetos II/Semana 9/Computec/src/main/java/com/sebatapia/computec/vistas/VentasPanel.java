@@ -1,4 +1,3 @@
-// package com.sebatapia.computec.vistas;
 package com.sebatapia.computec.vistas;
 
 import com.sebatapia.computec.command.AgregarItemCommand;
@@ -21,10 +20,6 @@ import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Panel para el registro de una nueva venta. Guía al usuario en un flujo
- * secuencial: seleccionar cliente, luego equipo, y finalmente registrar.
- */
 public class VentasPanel extends JPanel {
 
     // --- Controladores y Gestores ---
@@ -74,7 +69,6 @@ public class VentasPanel extends JPanel {
     }
 
     // --- Métodos de Creación de la UI ---
-
     private JPanel crearPanelCliente() {
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panel.setBorder(BorderFactory.createTitledBorder("Paso 1: Seleccionar Cliente"));
@@ -137,7 +131,6 @@ public class VentasPanel extends JPanel {
     }
 
     // --- Lógica de Eventos ---
-
     private void configurarEventos() {
         btnBuscarCliente.addActionListener(e -> buscarCliente());
         btnNuevaVenta.addActionListener(e -> establecerEstadoInicial());
@@ -152,7 +145,6 @@ public class VentasPanel extends JPanel {
     }
     
     // --- Métodos de Lógica de la Vista ---
-
     private void buscarCliente() {
         String rut = txtRutCliente.getText().trim();
         if (rut.isEmpty()) {
@@ -165,7 +157,6 @@ public class VentasPanel extends JPanel {
             ventaManager.seleccionarCliente(cliente);
             lblNombreCliente.setText("Cliente: " + cliente.getNombreCompleto());
             lblCorreoCliente.setText("(" + cliente.getCorreoElectronico() + ")");
-            
             // Bloquear selección de cliente y habilitar selección de equipo
             txtRutCliente.setEnabled(false);
             btnBuscarCliente.setEnabled(false);
@@ -196,13 +187,11 @@ public class VentasPanel extends JPanel {
     private void seleccionarEquipo() {
         int filaSeleccionada = tablaEquipos.getSelectedRow();
         int idEquipo = (int) modeloTablaEquipos.getValueAt(filaSeleccionada, 0);
-
         // Buscamos el objeto completo del equipo
         Equipo equipoSeleccionado = equipoControlador.listarEquipos().stream()
                 .filter(eq -> eq.getIdEquipo() == idEquipo)
                 .findFirst()
                 .orElse(null);
-
         if (equipoSeleccionado != null) {
             // Usamos el patrón Command para agregar el item
             new AgregarItemCommand(ventaManager, equipoSeleccionado).execute();
@@ -223,7 +212,6 @@ public class VentasPanel extends JPanel {
         if (chkDescuento.isSelected() && cliente != null) {
             calculoPrecio = new DescuentoTerceraEdad(calculoPrecio, cliente);
         }
-        
         double precioFinal = calculoPrecio.calcularPrecioFinal(equipo.getPrecio());
         NumberFormat formatoMoneda = NumberFormat.getCurrencyInstance(new Locale("es", "CL"));
         lblPrecioFinal.setText("Precio Final: " + formatoMoneda.format(precioFinal));
@@ -235,11 +223,9 @@ public class VentasPanel extends JPanel {
             JOptionPane.showMessageDialog(this, "Debe seleccionar un cliente y un equipo.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        
         // Asignamos el precio final calculado con el decorador
         double precioFinalCalculado = Double.parseDouble(lblPrecioFinal.getText().replaceAll("[^\\d,]", "").replace(",", "."));
         nuevaVenta.setPrecioFinal(precioFinalCalculado);
-
         boolean exito = ventaControlador.registrarVenta(nuevaVenta);
         if (exito) {
             JOptionPane.showMessageDialog(this, "Venta registrada con éxito.", "Éxito", JOptionPane.INFORMATION_MESSAGE);

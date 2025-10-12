@@ -8,10 +8,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.time.LocalDate;
 
-/**
- * Pruebas unitarias para las operaciones CRUD del ClienteControlador.
- * IMPORTANTE: Requiere que la base de datos esté activa.
- */
 public class ClienteControladorTest {
 
     private static ClienteControlador clienteControlador;

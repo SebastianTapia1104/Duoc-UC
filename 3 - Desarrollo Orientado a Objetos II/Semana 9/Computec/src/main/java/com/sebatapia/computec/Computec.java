@@ -14,7 +14,6 @@ public class Computec {
         System.out.println("---------------------------------");
 
         // 2. Iniciar la Interfaz de Usuario en el Event Dispatch Thread (EDT)
-        // Swing (JFrame) siempre debe ejecutarse en el EDT para ser thread-safe.
         javax.swing.SwingUtilities.invokeLater(() -> {
             try {
                 // Configuración opcional del Look and Feel

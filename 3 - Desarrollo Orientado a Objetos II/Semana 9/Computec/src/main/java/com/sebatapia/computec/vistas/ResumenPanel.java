@@ -1,4 +1,3 @@
-// package com.sebatapia.computec.vistas;
 package com.sebatapia.computec.vistas;
 
 import com.sebatapia.computec.controladores.ClienteControlador;
@@ -16,10 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
 
-/**
- * Panel que muestra un resumen o dashboard con los principales indicadores
- * de negocio, como total recaudado, número de clientes y ventas por categoría.
- */
+
 public class ResumenPanel extends JPanel {
 
     // --- Controladores para acceder a la lógica de negocio ---
@@ -39,12 +35,10 @@ public class ResumenPanel extends JPanel {
         this.clienteControlador = new ClienteControlador();
 
         // --- Configuración del Layout principal del panel ---
-        // GridLayout con 3 filas, 2 columnas, y espaciado de 20px
         setLayout(new GridLayout(3, 2, 20, 20));
-        setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20)); // Margen exterior
+        setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
         // --- Inicialización de los JLabels ---
-        // Usamos una fuente grande para que los números destaquen
         Font valorFont = new Font("Arial", Font.BOLD, 32);
         lblTotalRecaudadoValor = new JLabel("...", SwingConstants.CENTER);
         lblTotalRecaudadoValor.setFont(valorFont);
@@ -72,12 +66,6 @@ public class ResumenPanel extends JPanel {
         actualizarDatos();
     }
 
-    /**
-     * Método fábrica para crear un panel estilizado para cada indicador.
-     * @param titulo El título que se mostrará en el borde del panel.
-     * @param labelValor El JLabel que contendrá el valor numérico.
-     * @return Un JPanel estilizado y listo para ser agregado al layout principal.
-     */
     private JPanel crearCuadroResumen(String titulo, JLabel labelValor) {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBorder(BorderFactory.createTitledBorder(
@@ -91,10 +79,6 @@ public class ResumenPanel extends JPanel {
         return panel;
     }
 
-    /**
-     * Obtiene los datos más recientes de los controladores y actualiza los JLabels.
-     * Este método debe ser público para poder llamarlo desde fuera cuando sea necesario.
-     */
     public void actualizarDatos() {
         // --- Obtener estadísticas generales de ventas ---
         Map<String, Object> estadisticas = ventaControlador.obtenerEstadisticasVentas();

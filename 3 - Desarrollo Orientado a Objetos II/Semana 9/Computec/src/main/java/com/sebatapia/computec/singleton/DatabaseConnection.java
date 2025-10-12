@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class DatabaseConnection {
     private static DatabaseConnection instance;
     private Connection connection;
-    private final String URL = "jdbc:mysql://localhost:3306/computec"; // Cambia a tu BD
-    private final String USER = "root"; // Cambia a tu usuario
-    private final String PASSWORD = "admin1104"; // Cambia a tu contraseña
+    private final String URL = "jdbc:mysql://localhost:3306/computec";
+    private final String USER = "root"; 
+    private final String PASSWORD = "admin1104";
 
     private DatabaseConnection() {
         try {

@@ -9,10 +9,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Pruebas unitarias para las operaciones CRUD del EquipoControlador.
- * IMPORTANTE: Requiere que la base de datos esté activa.
- */
 public class EquipoControladorTest {
 
     private static EquipoControlador equipoControlador;

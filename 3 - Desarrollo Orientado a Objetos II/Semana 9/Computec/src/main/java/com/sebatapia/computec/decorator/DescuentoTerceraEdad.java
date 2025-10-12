@@ -1,4 +1,3 @@
-// package com.sebatapia.computec.decorator;
 package com.sebatapia.computec.decorator;
 
 import com.sebatapia.computec.interfaces.Descuento;
@@ -6,9 +5,6 @@ import com.sebatapia.computec.modelos.Cliente;
 import java.time.LocalDate;
 import java.time.Period;
 
-/**
- * Decorador Concreto: Extiende del decorador abstracto y añade su propia lógica.
- */
 public class DescuentoTerceraEdad extends DescuentoDecorator {
 
     private final Cliente cliente;
@@ -29,7 +25,6 @@ public class DescuentoTerceraEdad extends DescuentoDecorator {
             double descuento = precioCalculado * 0.15; // 15% de descuento
             return precioCalculado - descuento;
         }
-        
         return precioCalculado;
     }
 

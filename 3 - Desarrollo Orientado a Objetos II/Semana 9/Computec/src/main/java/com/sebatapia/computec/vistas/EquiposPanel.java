@@ -52,15 +52,12 @@ public class EquiposPanel extends JPanel {
         this.equipoControlador = new EquipoControlador();
         this.ventaControlador = new VentaControlador();
         setLayout(new BorderLayout());
-
         JTabbedPane tabbedPane = new JTabbedPane();
         tabbedPane.addTab("Resumen de Equipos", crearPanelResumen());
         tabbedPane.addTab("Crear Equipo", crearPanelCrear());
         tabbedPane.addTab("Actualizar Equipo", crearPanelActualizar());
         tabbedPane.addTab("Eliminar Equipo", crearPanelEliminar());
-
         add(tabbedPane, BorderLayout.CENTER);
-        
         cargarEquiposEnTabla();
     }
     
@@ -68,7 +65,6 @@ public class EquiposPanel extends JPanel {
     private JPanel crearPanelResumen() {
         JPanel panel = new JPanel(new BorderLayout(5, 5));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-
         JPanel panelFiltros = new JPanel(new FlowLayout(FlowLayout.LEFT));
         comboFiltroResumen = new JComboBox<>(new String[]{"Modelo", "Tipo", "CPU"});
         txtFiltroResumen = new JTextField(20);
@@ -77,14 +73,12 @@ public class EquiposPanel extends JPanel {
         panelFiltros.add(comboFiltroResumen);
         panelFiltros.add(txtFiltroResumen);
         panelFiltros.add(btnFiltrar);
-
         modeloTablaEquipos = new DefaultTableModel(new String[]{"ID", "Modelo", "Tipo", "CPU", "RAM", "Disco Duro", "Precio", "Detalles"}, 0){
             @Override public boolean isCellEditable(int row, int column) { return false; }
         };
         tablaEquipos = new JTable(modeloTablaEquipos);
         panel.add(new JScrollPane(tablaEquipos), BorderLayout.CENTER);
         panel.add(panelFiltros, BorderLayout.NORTH);
-
         final TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(modeloTablaEquipos);
         tablaEquipos.setRowSorter(sorter);
         btnFiltrar.addActionListener(e -> {
@@ -121,13 +115,11 @@ public class EquiposPanel extends JPanel {
     private JPanel crearPanelCrear() {
         JPanel panelPrincipal = new JPanel(new BorderLayout(10, 10));
         panelPrincipal.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-
         JPanel panelComun = new JPanel(new GridBagLayout());
         panelComun.setBorder(BorderFactory.createTitledBorder("Datos Generales"));
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(5, 5, 5, 5);
         gbc.anchor = GridBagConstraints.WEST;
-
         radioLaptopCrear = new JRadioButton("Laptop", true);
         radioDesktopCrear = new JRadioButton("Desktop");
         ButtonGroup grupoTipo = new ButtonGroup();
@@ -137,38 +129,31 @@ public class EquiposPanel extends JPanel {
         panelTipo.add(new JLabel("Tipo de Equipo:"));
         panelTipo.add(radioLaptopCrear);
         panelTipo.add(radioDesktopCrear);
-
         txtModeloCrear = new JTextField(20);
         txtCpuCrear = new JTextField(20);
         txtDiscoDuroCrear = new JTextField(20);
         txtRamCrear = new JTextField(20);
         txtPrecioCrear = new JTextField(20);
-
         gbc.gridx = 0; gbc.gridy = 0; gbc.gridwidth = 2; panelComun.add(panelTipo, gbc); gbc.gridwidth = 1;
         gbc.gridy++; gbc.gridx = 0; panelComun.add(new JLabel("Modelo:"), gbc); gbc.gridx = 1; panelComun.add(txtModeloCrear, gbc);
         gbc.gridy++; gbc.gridx = 0; panelComun.add(new JLabel("CPU:"), gbc); gbc.gridx = 1; panelComun.add(txtCpuCrear, gbc);
         gbc.gridy++; gbc.gridx = 0; panelComun.add(new JLabel("Disco Duro (GB):"), gbc); gbc.gridx = 1; panelComun.add(txtDiscoDuroCrear, gbc);
         gbc.gridy++; gbc.gridx = 0; panelComun.add(new JLabel("RAM (GB):"), gbc); gbc.gridx = 1; panelComun.add(txtRamCrear, gbc);
         gbc.gridy++; gbc.gridx = 0; panelComun.add(new JLabel("Precio:"), gbc); gbc.gridx = 1; panelComun.add(txtPrecioCrear, gbc);
-
         crearPanelesEspecificos();
         panelCamposEspecificosCrear = new JPanel(new CardLayout());
         panelCamposEspecificosCrear.add(panelLaptopCrear, "Laptop");
         panelCamposEspecificosCrear.add(panelDesktopCrear, "Desktop");
-
         JButton btnGuardar = new JButton("Guardar Equipo");
         JPanel panelBoton = new JPanel(new FlowLayout(FlowLayout.CENTER));
         panelBoton.add(btnGuardar);
-
         panelPrincipal.add(panelComun, BorderLayout.NORTH);
         panelPrincipal.add(panelCamposEspecificosCrear, BorderLayout.CENTER);
         panelPrincipal.add(panelBoton, BorderLayout.SOUTH);
-
         CardLayout cl = (CardLayout)(panelCamposEspecificosCrear.getLayout());
         radioLaptopCrear.addActionListener(e -> cl.show(panelCamposEspecificosCrear, "Laptop"));
         radioDesktopCrear.addActionListener(e -> cl.show(panelCamposEspecificosCrear, "Desktop"));
         btnGuardar.addActionListener(e -> guardarEquipo());
-
         return panelPrincipal;
     }
 
@@ -181,7 +166,6 @@ public class EquiposPanel extends JPanel {
         panelLaptopCrear.add(new JLabel("Tamaño Pantalla (\"):")); panelLaptopCrear.add(txtPantallaLaptop);
         panelLaptopCrear.add(new JLabel("")); panelLaptopCrear.add(chkTouchLaptop);
         panelLaptopCrear.add(new JLabel("Puertos USB:")); panelLaptopCrear.add(txtUsbLaptop);
-
         panelDesktopCrear = new JPanel(new GridLayout(2, 2, 5, 5));
         panelDesktopCrear.setBorder(BorderFactory.createTitledBorder("Datos de Desktop"));
         txtFuenteDesktop = new JTextField(10);
@@ -230,15 +214,11 @@ public class EquiposPanel extends JPanel {
         panelBusqueda.add(txtIdBuscarActualizar);
         JButton btnBuscar = new JButton("Buscar Equipo");
         panelBusqueda.add(btnBuscar);
-        
         panelFormularioActualizar = crearFormularioActualizar();
         panelFormularioActualizar.setVisible(false);
-
         panel.add(panelBusqueda, BorderLayout.NORTH);
         panel.add(panelFormularioActualizar, BorderLayout.CENTER);
-
         btnBuscar.addActionListener(e -> buscarParaActualizar());
-        
         return panel;
     }
 
@@ -394,9 +374,7 @@ public class EquiposPanel extends JPanel {
         panel.add(txtIdEliminar);
         btnEliminar = new JButton("Eliminar Equipo");
         panel.add(btnEliminar);
-        
         btnEliminar.addActionListener(e -> eliminarEquipo());
-
         return panel;
     }
     
@@ -406,23 +384,19 @@ public class EquiposPanel extends JPanel {
             JOptionPane.showMessageDialog(this, "Por favor, ingrese un ID de equipo.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
-
         try {
             int id = Integer.parseInt(idTexto);
-            
             // Lógica de negocio para no eliminar equipos vendidos
             boolean haSidoVendido = false; // Implementar la lógica real con VentaControlador
             if (haSidoVendido) {
                 JOptionPane.showMessageDialog(this, "No se puede eliminar. Este equipo figura en una o más ventas.", "Operación Denegada", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            
             int confirmacion = JOptionPane.showConfirmDialog(this, 
                 "¿Está seguro de que desea eliminar el equipo con ID " + id + "?", 
                 "Confirmar Eliminación", 
                 JOptionPane.YES_NO_OPTION, 
                 JOptionPane.WARNING_MESSAGE);
-            
             if (confirmacion == JOptionPane.YES_OPTION) {
                 if (equipoControlador.eliminarEquipo(id)) {
                     JOptionPane.showMessageDialog(this, "Equipo eliminado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);

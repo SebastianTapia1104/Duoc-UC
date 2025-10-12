@@ -1,4 +1,3 @@
-// package com.sebatapia.computec.controladores;
 package com.sebatapia.computec.controladores;
 
 import com.sebatapia.computec.modelos.Cliente;
@@ -11,10 +10,6 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Controlador: Gestiona la lógica de negocio y las operaciones CRUD para los Clientes.
- * Se comunica con la base de datos a través de procedimientos almacenados.
- */
 public class ClienteControlador {
 
     private final Connection connection;
@@ -24,11 +19,6 @@ public class ClienteControlador {
         this.connection = DatabaseConnection.getInstance().getConnection();
     }
 
-    /**
-     * Registra un nuevo cliente en la base de datos.
-     * @param cliente El objeto Cliente con los datos a guardar.
-     * @return true si el registro fue exitoso, false en caso contrario.
-     */
     public boolean registrarCliente(Cliente cliente) {
         // Llama al procedimiento almacenado sp_registrarCliente
         String sql = "{CALL sp_registrarCliente(?, ?, ?, ?, ?, ?, ?)}";
@@ -44,16 +34,11 @@ public class ClienteControlador {
             int affectedRows = stmt.executeUpdate();
             return affectedRows > 0;
         } catch (SQLException e) {
-            e.printStackTrace(); // Es buena práctica usar un logger en una app real
+            e.printStackTrace();
             return false;
         }
     }
 
-    /**
-     * Busca un cliente por su RUT.
-     * @param rut El RUT del cliente a buscar.
-     * @return Un objeto Cliente si se encuentra, de lo contrario null.
-     */
     public Cliente buscarClientePorRut(String rut) {
         String sql = "{CALL sp_buscarClientePorRut(?)}";
         try (CallableStatement stmt = connection.prepareCall(sql)) {
@@ -78,10 +63,6 @@ public class ClienteControlador {
         return null;
     }
 
-    /**
-     * Obtiene una lista de todos los clientes registrados.
-     * @return Una lista de objetos Cliente.
-     */
     public List<Cliente> listarClientes() {
         List<Cliente> clientes = new ArrayList<>();
         String sql = "{CALL sp_listarClientes()}";
@@ -105,11 +86,6 @@ public class ClienteControlador {
         return clientes;
     }
 
-    /**
-     * Actualiza los datos de un cliente existente.
-     * @param cliente El objeto Cliente con los datos actualizados.
-     * @return true si la actualización fue exitosa, false en caso contrario.
-     */
     public boolean actualizarCliente(Cliente cliente) {
         String sql = "{CALL sp_actualizarCliente(?, ?, ?, ?, ?, ?, ?)}";
         try (CallableStatement stmt = connection.prepareCall(sql)) {
@@ -129,11 +105,6 @@ public class ClienteControlador {
         }
     }
 
-    /**
-     * Elimina un cliente de la base de datos usando su RUT.
-     * @param rut El RUT del cliente a eliminar.
-     * @return true si la eliminación fue exitosa, false en caso contrario.
-     */
     public boolean eliminarCliente(String rut) {
         String sql = "{CALL sp_eliminarCliente(?)}";
         try (CallableStatement stmt = connection.prepareCall(sql)) {

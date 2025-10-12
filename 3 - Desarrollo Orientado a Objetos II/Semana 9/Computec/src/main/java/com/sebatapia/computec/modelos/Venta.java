@@ -10,9 +10,7 @@ public class Venta {
     private Equipo equipo;   // Objeto completo para tener todos los datos del equipo
     private double precioFinal; // Precio al momento de la venta
 
-    // =======================================================
-    // 1. CONSTRUCTOR COMPLETO (Para cargar desde la BD)
-    // =======================================================
+    // Constructor completo
     public Venta(int idVenta, LocalDateTime fechaHora, Cliente cliente, Equipo equipo) {
         this.idVenta = idVenta;
         this.fechaHora = fechaHora;
@@ -23,13 +21,7 @@ public class Venta {
         }
     }
 
-    // =======================================================
-    // 2. CONSTRUCTOR PARA CREACIÓN (Para registrar una nueva venta)
-    // =======================================================
-    /**
-     * Constructor para registrar una nueva venta.
-     * Captura automáticamente la fecha y hora actual del sistema.
-     */
+    // Constructor especial de creación
     public Venta(Cliente cliente, Equipo equipo) {
         this.idVenta = 0; // El ID será asignado por la base de datos
         this.fechaHora = LocalDateTime.now(); // Captura la fecha y hora actual
@@ -40,41 +32,38 @@ public class Venta {
         }
     }
     
-    // =======================================================
-    // 3. CONSTRUCTOR VACÍO
-    // =======================================================
+    // Constructor vacío
     public Venta() {
     }
 
-    // =======================================================
-    // Getters y Setters
-    // =======================================================
+    // Getters 
     public int getIdVenta() {
         return idVenta;
     }
-
-    public void setIdVenta(int idVenta) {
-        this.idVenta = idVenta;
-    }
-
     public LocalDateTime getFechaHora() {
         return fechaHora;
+    }
+    public Cliente getCliente() {
+        return cliente;
+    }
+    public Equipo getEquipo() {
+        return equipo;
+    }
+    public double getPrecioFinal() {
+        return precioFinal;
+    }
+    
+    // Setters
+    public void setIdVenta(int idVenta) {
+        this.idVenta = idVenta;
     }
 
     public void setFechaHora(LocalDateTime fechaHora) {
         this.fechaHora = fechaHora;
     }
 
-    public Cliente getCliente() {
-        return cliente;
-    }
-
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
-    }
-
-    public Equipo getEquipo() {
-        return equipo;
     }
 
     public void setEquipo(Equipo equipo) {
@@ -83,10 +72,6 @@ public class Venta {
         if (equipo != null) {
             this.setPrecioFinal(equipo.getPrecio());
         }
-    }
-
-    public double getPrecioFinal() {
-        return precioFinal;
     }
 
     public void setPrecioFinal(double precioFinal) {

@@ -6,11 +6,7 @@ import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import javax.swing.border.Border;
 
-/**
- * Ventana Principal de la Aplicación Computec.
- * Contiene un menú para navegar entre los diferentes módulos (JPanels)
- * utilizando un CardLayout. Esta es la clase que se ejecuta para iniciar el programa.
- */
+
 public class MainFrame extends JFrame {
 
     private CardLayout cardLayout;
@@ -45,18 +41,14 @@ public class MainFrame extends JFrame {
         add(mainPanel, BorderLayout.CENTER);
     }
 
-    /**
-     * Crea y configura la barra de menú superior para la navegación.
-     */
     private void crearMenuBar() {
         JMenuBar menuBar = new JMenuBar();
 
         // --- 1. Definimos el estilo para los botones del menú ---
-        Font menuFont = new Font("Segoe UI", Font.BOLD, 14); // Fuente más grande y legible
-        // El borde vacío añade un relleno: 5px arriba/abajo, 10px izquierda/derecha
+        Font menuFont = new Font("Segoe UI", Font.BOLD, 14);
         Border menuPadding = BorderFactory.createEmptyBorder(5, 10, 5, 10);
 
-        // --- 2. Creamos los JMenus y aplicamos el nuevo estilo ---
+        // --- 2. Creamos los JMenus y aplicamos el estilo ---
         JMenu menuResumen = new JMenu("Resumen");
         menuResumen.setFont(menuFont);
         menuResumen.setBorder(menuPadding);
@@ -118,17 +110,12 @@ public class MainFrame extends JFrame {
         setJMenuBar(menuBar);
     }
 
-    /**
-     * Instancia cada panel, le asigna listeners para actualización dinámica
-     * y los agrega al contenedor principal con CardLayout.
-     */
     private void inicializarPaneles() {
         resumenPanel = new ResumenPanel();
         clientesPanel = new ClientesPanel();
         equiposPanel = new EquiposPanel();
         ventaPanel = new VentasPanel();
         reportesPanel = new ReportesPanel();
-
         // Listener para el panel Resumen: actualiza los datos cada vez que se muestra.
         resumenPanel.addComponentListener(new ComponentAdapter() {
             @Override
@@ -136,7 +123,6 @@ public class MainFrame extends JFrame {
                 resumenPanel.actualizarDatos();
             }
         });
-
         // Listener para el panel Reportes: actualiza el reporte cada vez que se muestra.
         reportesPanel.addComponentListener(new ComponentAdapter() {
             @Override
@@ -144,7 +130,6 @@ public class MainFrame extends JFrame {
                 reportesPanel.generarReporte();
             }
         });
-
         // Agregamos los paneles al contenedor principal con un nombre único
         mainPanel.add(resumenPanel, "Resumen");
         mainPanel.add(clientesPanel, "Clientes");

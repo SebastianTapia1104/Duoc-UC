@@ -1,4 +1,3 @@
-// package com.sebatapia.computec.vistas;
 package com.sebatapia.computec.vistas;
 
 import com.sebatapia.computec.controladores.ClienteControlador;
@@ -6,14 +5,12 @@ import com.sebatapia.computec.controladores.VentaControlador;
 import com.sebatapia.computec.modelos.Cliente;
 
 import javax.swing.*;
-import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import java.awt.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.List;
-import java.util.Vector;
 
 public class ClientesPanel extends JPanel {
 
@@ -55,7 +52,7 @@ public class ClientesPanel extends JPanel {
         cargarClientesEnTabla();
     }
 
-    // --- Pestaña 1: Resumen de Clientes (Código sin cambios) ---
+    // --- Pestaña 1: Resumen de Clientes ---
     private JPanel crearPanelResumen() {
         JPanel panel = new JPanel(new BorderLayout(5, 5));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -106,7 +103,7 @@ public class ClientesPanel extends JPanel {
         }
     }
 
-    // --- Pestaña 2: Crear Cliente (Código sin cambios) ---
+    // --- Pestaña 2: Crear Cliente ---
     private JPanel crearPanelCrear() {
         JPanel panel = new JPanel(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -135,7 +132,6 @@ public class ClientesPanel extends JPanel {
         gbc.gridx = 1; panel.add(txtTelefonoCrear, gbc);
         gbc.gridy++; gbc.gridx = 0; panel.add(new JLabel("Fecha Nacimiento (AAAA-MM-DD):"), gbc);
         gbc.gridx = 1; panel.add(txtFechaNacimientoCrear, gbc);
-
         gbc.gridy++; gbc.gridx = 0; gbc.gridwidth = 2; gbc.anchor = GridBagConstraints.CENTER;
         JButton btnCrear = new JButton("Guardar Cliente");
         panel.add(btnCrear, gbc);
@@ -168,7 +164,7 @@ public class ClientesPanel extends JPanel {
         }
     }
 
-    // --- Pestaña 3: Actualizar Cliente (VERSIÓN COMPLETA) ---
+    // --- Pestaña 3: Actualizar Cliente ---
     private JPanel crearPanelActualizar() {
         JPanel panel = new JPanel(new BorderLayout(10, 10));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -187,7 +183,6 @@ public class ClientesPanel extends JPanel {
         gbc.insets = new Insets(5, 5, 5, 5);
         gbc.anchor = GridBagConstraints.WEST;
 
-        // --- INICIO DE CÓDIGO COMPLETADO ---
         txtNombreActualizar = new JTextField(20);
         txtDireccionActualizar = new JTextField(20);
         txtComunaActualizar = new JTextField(20);
@@ -208,10 +203,8 @@ public class ClientesPanel extends JPanel {
         gbc.gridx = 1; panelFormularioActualizar.add(txtTelefonoActualizar, gbc);
         gbc.gridy++; gbc.gridx = 0; panelFormularioActualizar.add(new JLabel("Fecha Nacimiento (AAAA-MM-DD):"), gbc);
         gbc.gridx = 1; panelFormularioActualizar.add(txtFechaNacimientoActualizar, gbc);
-
         gbc.gridy++; gbc.gridx = 0; gbc.gridwidth = 2; gbc.anchor = GridBagConstraints.CENTER;
         panelFormularioActualizar.add(btnActualizar, gbc);
-        // --- FIN DE CÓDIGO COMPLETADO ---
 
         panel.add(panelBusqueda, BorderLayout.NORTH);
         panel.add(panelFormularioActualizar, BorderLayout.CENTER);
@@ -226,14 +219,12 @@ public class ClientesPanel extends JPanel {
         clienteParaActualizar = clienteControlador.buscarClientePorRut(rut);
         if (clienteParaActualizar != null) {
             panelFormularioActualizar.setVisible(true);
-            // --- INICIO DE CÓDIGO COMPLETADO ---
             txtNombreActualizar.setText(clienteParaActualizar.getNombreCompleto());
             txtDireccionActualizar.setText(clienteParaActualizar.getDireccion());
             txtComunaActualizar.setText(clienteParaActualizar.getComuna());
             txtCorreoActualizar.setText(clienteParaActualizar.getCorreoElectronico());
             txtTelefonoActualizar.setText(clienteParaActualizar.getTelefono());
             txtFechaNacimientoActualizar.setText(clienteParaActualizar.getFechaNacimiento().toString());
-            // --- FIN DE CÓDIGO COMPLETADO ---
             this.revalidate();
             this.repaint();
         } else {
@@ -248,15 +239,12 @@ public class ClientesPanel extends JPanel {
             return;
         }
         try {
-            // --- INICIO DE CÓDIGO COMPLETADO ---
             clienteParaActualizar.setNombreCompleto(txtNombreActualizar.getText().trim());
             clienteParaActualizar.setDireccion(txtDireccionActualizar.getText().trim());
             clienteParaActualizar.setComuna(txtComunaActualizar.getText().trim());
             clienteParaActualizar.setCorreoElectronico(txtCorreoActualizar.getText().trim());
             clienteParaActualizar.setTelefono(txtTelefonoActualizar.getText().trim());
             clienteParaActualizar.setFechaNacimiento(LocalDate.parse(txtFechaNacimientoActualizar.getText().trim()));
-            // --- FIN DE CÓDIGO COMPLETADO ---
-
             if (clienteControlador.actualizarCliente(clienteParaActualizar)) {
                 JOptionPane.showMessageDialog(this, "Cliente actualizado con éxito.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
                 cargarClientesEnTabla();
@@ -270,17 +258,15 @@ public class ClientesPanel extends JPanel {
         }
     }
 
-    // --- Pestaña 4: Eliminar Cliente (Código sin cambios) ---
+    // --- Pestaña 4: Eliminar Cliente ---
     private JPanel crearPanelEliminar() {
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panel.setBorder(BorderFactory.createEmptyBorder(20, 10, 10, 10));
-
         panel.add(new JLabel("RUT del Cliente a Eliminar:"));
         txtRutEliminar = new JTextField(15);
         panel.add(txtRutEliminar);
         btnEliminar = new JButton("Eliminar Cliente");
         panel.add(btnEliminar);
-
         btnEliminar.addActionListener(e -> eliminarCliente());
         return panel;
     }
@@ -297,17 +283,8 @@ public class ClientesPanel extends JPanel {
             JOptionPane.showMessageDialog(this, "El cliente con el RUT ingresado no existe.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
-
-        /*
-         * Regla de negocio: Verificar si el cliente tiene ventas asociadas.
-         * Para una implementación robusta, se necesitaría un método en VentaControlador
-         * como `tieneVentas(String rutCliente)` que haga un `SELECT COUNT(*)` en la BD.
-         * Aquí simulamos esa comprobación buscando en el reporte.
-        */
         boolean tieneVentas = ventaControlador.generarReporteVentas("Todos").stream()
                                .anyMatch(row -> {
-                                   // Asumiendo que row[1] es el nombre del cliente.
-                                   // Una comparación por RUT sería más segura si el reporte lo incluyera.
                                    return cliente.getNombreCompleto().equals(row[1]);
                                });
 

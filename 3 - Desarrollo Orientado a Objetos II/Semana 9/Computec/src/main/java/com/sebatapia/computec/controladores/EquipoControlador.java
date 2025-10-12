@@ -1,4 +1,3 @@
-// package com.sebatapia.computec.controladores;
 package com.sebatapia.computec.controladores;
 
 import com.sebatapia.computec.modelos.Desktop;
@@ -12,10 +11,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Controlador: Gestiona la lógica de negocio y las operaciones CRUD para los Equipos.
- * Maneja la herencia entre Laptop y Desktop.
- */
 public class EquipoControlador {
 
     private final Connection connection;
@@ -24,11 +19,6 @@ public class EquipoControlador {
         this.connection = DatabaseConnection.getInstance().getConnection();
     }
 
-    /**
-     * Registra un nuevo equipo (Laptop o Desktop) en la base de datos.
-     * @param equipo El objeto Equipo a registrar.
-     * @return true si el registro fue exitoso, false en caso contrario.
-     */
     public boolean registrarEquipo(Equipo equipo) {
         String sql = "{CALL sp_registrarEquipo(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         try (CallableStatement stmt = connection.prepareCall(sql)) {
@@ -69,10 +59,6 @@ public class EquipoControlador {
         }
     }
 
-    /**
-     * Obtiene una lista de todos los equipos.
-     * @return Una lista de objetos Equipo.
-     */
     public List<Equipo> listarEquipos() {
         List<Equipo> equipos = new ArrayList<>();
         String sql = "{CALL sp_listarEquipos()}";
@@ -100,12 +86,7 @@ public class EquipoControlador {
         }
         return equipos;
     }
-
-    /**
-     * Busca un equipo específico por su ID.
-     * @param id El ID del equipo a buscar.
-     * @return Un objeto Equipo si se encuentra, de lo contrario null.
-     */
+    
     public Equipo buscarEquipoPorId(int id) {
         String sql = "{CALL sp_buscarEquipoPorId(?)}";
         try (CallableStatement stmt = connection.prepareCall(sql)) {
@@ -134,11 +115,6 @@ public class EquipoControlador {
         return null;
     }
 
-    /**
-     * Actualiza los datos de un equipo existente.
-     * @param equipo El objeto Equipo con los datos actualizados.
-     * @return true si la actualización fue exitosa, false en caso contrario.
-     */
     public boolean actualizarEquipo(Equipo equipo) {
         String sql = "{CALL sp_actualizarEquipo(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         try (CallableStatement stmt = connection.prepareCall(sql)) {
@@ -174,11 +150,6 @@ public class EquipoControlador {
         }
     }
 
-    /**
-     * Elimina un equipo de la base de datos usando su ID.
-     * @param id El ID del equipo a eliminar.
-     * @return true si la eliminación fue exitosa, false en caso contrario.
-     */
     public boolean eliminarEquipo(int id) {
         String sql = "{CALL sp_eliminarEquipo(?)}";
         try (CallableStatement stmt = connection.prepareCall(sql)) {

@@ -4,26 +4,20 @@ public class Laptop extends Equipo {
 
     // Atributos específicos de la Laptop
     private double tamanoPantalla;
-    private boolean esTouch; // Renombrado para seguir convenciones (antes era Touch)
+    private boolean esTouch; 
     private int puertosUSB;
 
-    // =======================================================
-    // 1. CONSTRUCTOR COMPLETO (Corregido)
-    // =======================================================
+    // Constructor completo
     public Laptop(int idEquipo, String descripcionModelo, String cpu, int discoDuroMB, int ramGB, double precio,
                   double tamanoPantalla, boolean esTouch, int puertosUSB) {
-        
-        // Llama al constructor base de Equipo con 'double' para el precio
+        // Llama al constructor base de Equipo
         super(idEquipo, descripcionModelo, cpu, discoDuroMB, ramGB, precio, "Laptop"); 
-        
         this.tamanoPantalla = tamanoPantalla;
         this.esTouch = esTouch;
         this.puertosUSB = puertosUSB;
     }
 
-    // =======================================================
-    // 2. CONSTRUCTOR PARA CREACIÓN (Corregido)
-    // =======================================================
+    // Constructor especial de creación
     public Laptop(String descripcionModelo, String cpu, int discoDuroMB, int ramGB, double precio,
                   double tamanoPantalla, boolean esTouch, int puertosUSB) {
         
@@ -35,9 +29,6 @@ public class Laptop extends Equipo {
         this.puertosUSB = puertosUSB;
     }
 
-    // =======================================================
-    // 3. Método Abstracto Implementado
-    // =======================================================
     @Override
     public String getDetalleEspecifico() {
         return String.format("Pantalla: %.1f\" (%s), USBs: %d", 
@@ -49,27 +40,26 @@ public class Laptop extends Equipo {
         return "Laptop";
     }
 
-    // =======================================================
-    // Getters y Setters Específicos
-    // =======================================================
+    // Getters
     public double getTamanoPantalla() {
         return tamanoPantalla;
     }
 
-    public void setTamanoPantalla(double tamanoPantalla) {
-        this.tamanoPantalla = tamanoPantalla;
-    }
-
-    public boolean isEsTouch() { // Getter actualizado al nuevo nombre
+    public boolean isEsTouch() {
         return esTouch;
-    }
-
-    public void setEsTouch(boolean esTouch) { // Setter actualizado
-        this.esTouch = esTouch;
     }
 
     public int getPuertosUSB() {
         return puertosUSB;
+    }
+    
+    // Setters
+    public void setTamanoPantalla(double tamanoPantalla) {
+        this.tamanoPantalla = tamanoPantalla;
+    }
+
+    public void setEsTouch(boolean esTouch) {
+        this.esTouch = esTouch;
     }
 
     public void setPuertosUSB(int puertosUSB) {

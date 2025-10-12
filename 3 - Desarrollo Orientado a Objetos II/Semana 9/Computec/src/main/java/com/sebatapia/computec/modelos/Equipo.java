@@ -8,12 +8,10 @@ public abstract class Equipo {
     protected String cpu;
     protected int discoDuroGB;
     protected int ramGB;
-    protected double precio; // Cambiado de BigDecimal a double
+    protected double precio;
     protected String tipoEquipo;
 
-    // =======================================================
-    // 1. CONSTRUCTOR COMPLETO
-    // =======================================================
+    // Constructor completo
     public Equipo(int idEquipo, String descripcionModelo, String cpu, int discoDuroMB, int ramGB, double precio, String tipoEquipo) {
         this.idEquipo = idEquipo;
         this.modelo = descripcionModelo;
@@ -24,29 +22,23 @@ public abstract class Equipo {
         this.tipoEquipo = tipoEquipo;
     }
     
-    // =======================================================
-    // 2. CONSTRUCTOR SIMPLIFICADO DE REPORTE
-    // =======================================================
+    // Constructor especial de reporte
     public Equipo(int idEquipo, String descripcionModelo) {
         this.idEquipo = idEquipo;
         this.modelo = descripcionModelo;
         this.cpu = "N/A";
         this.discoDuroGB = 0;
         this.ramGB = 0;
-        this.precio = 0.0; // Cambiado de BigDecimal.ZERO a 0.0
+        this.precio = 0.0; 
         this.tipoEquipo = "Reporte";
     }
     
-    // =======================================================
-    // 3. CONSTRUCTOR PARA CREACIÓN
-    // =======================================================
+    // Constructor especial de creación
     public Equipo(String descripcionModelo, String cpu, int discoDuroMB, int ramGB, double precio, String tipoEquipo) {
         this(0, descripcionModelo, cpu, discoDuroMB, ramGB, precio, tipoEquipo);
     }
 
-    // =======================================================
-    // 4. CONSTRUCTOR VACÍO Y GETTERS/SETTERS
-    // =======================================================
+    // Constructor vacío
     public Equipo() {
     }
 

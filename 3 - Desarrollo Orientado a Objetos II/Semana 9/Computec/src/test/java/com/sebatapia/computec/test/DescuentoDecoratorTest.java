@@ -8,9 +8,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.time.LocalDate;
 
-/**
- * Pruebas unitarias para el patrón Decorator de descuentos.
- */
 public class DescuentoDecoratorTest {
 
     @Test
