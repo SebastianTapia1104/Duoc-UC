@@ -1,0 +1,164 @@
+// package com.sebatapia.computec.vistas;
+package com.sebatapia.computec.vistas;
+
+import com.sebatapia.computec.controladores.VentaControlador;
+
+import javax.swing.*;
+import javax.swing.border.TitledBorder;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import java.awt.*;
+import java.text.NumberFormat;
+import java.util.List;
+import java.util.Locale;
+
+/**
+ * Panel para visualizar el reporte de ventas.
+ * Permite filtrar los resultados y buscar dentro de ellos.
+ */
+public class ReportesPanel extends JPanel {
+
+    private final VentaControlador ventaControlador;
+
+    // --- Componentes de la UI ---
+    private JTable tablaReportes;
+    private DefaultTableModel modeloTablaReportes;
+    private JComboBox<String> comboTipoEquipo;
+    private JTextField txtBusquedaRapida;
+    private TableRowSorter<DefaultTableModel> sorter;
+
+    public ReportesPanel() {
+        this.ventaControlador = new VentaControlador();
+        setLayout(new BorderLayout(10, 10));
+        setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+
+        // --- Crear y añadir los sub-paneles ---
+        add(crearPanelFiltros(), BorderLayout.NORTH);
+        add(crearPanelTabla(), BorderLayout.CENTER);
+
+        // --- Cargar los datos iniciales ---
+        generarReporte();
+    }
+
+    /**
+     * Crea el panel superior que contiene los controles de filtro.
+     */
+    private JPanel crearPanelFiltros() {
+        JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        panel.setBorder(BorderFactory.createTitledBorder("Filtros del Reporte"));
+
+        // Filtro principal por tipo de equipo
+        panel.add(new JLabel("Filtrar por Tipo de Equipo:"));
+        comboTipoEquipo = new JComboBox<>(new String[]{"Todos", "Laptop", "Desktop"});
+        panel.add(comboTipoEquipo);
+
+        JButton btnGenerarReporte = new JButton("Generar Reporte");
+        panel.add(btnGenerarReporte);
+
+        // Separador visual
+        panel.add(new JSeparator(SwingConstants.VERTICAL));
+        panel.add(new JSeparator(SwingConstants.VERTICAL));
+
+        // Filtro secundario para búsqueda rápida en la tabla
+        panel.add(new JLabel("Búsqueda Rápida:"));
+        txtBusquedaRapida = new JTextField(20);
+        panel.add(txtBusquedaRapida);
+        
+        // --- Lógica de Eventos ---
+        btnGenerarReporte.addActionListener(e -> generarReporte());
+        
+        txtBusquedaRapida.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                filtrarTablaLocalmente();
+            }
+        });
+
+        return panel;
+    }
+
+    /**
+     * Crea el panel central que contiene la tabla de resultados.
+     */
+    private JPanel crearPanelTabla() {
+        JPanel panel = new JPanel(new BorderLayout());
+        String[] columnas = {"Modelo Equipo", "Nombre Cliente", "Teléfono", "Correo", "Precio Venta"};
+        
+        modeloTablaReportes = new DefaultTableModel(columnas, 0) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false; // Tabla de solo lectura
+            }
+        };
+        
+        tablaReportes = new JTable(modeloTablaReportes);
+        tablaReportes.setFillsViewportHeight(true);
+        
+        // Configurar el sorter para el filtro de texto rápido
+        sorter = new TableRowSorter<>(modeloTablaReportes);
+        tablaReportes.setRowSorter(sorter);
+
+        panel.add(new JScrollPane(tablaReportes), BorderLayout.CENTER);
+        return panel;
+    }
+
+    /**
+     * Llama al controlador para obtener los datos de la BD según el filtro
+     * y actualiza la tabla.
+     */
+    public void generarReporte() {
+        String tipoFiltro = (String) comboTipoEquipo.getSelectedItem();
+        
+        // Limpiar la tabla antes de cargar nuevos datos
+        modeloTablaReportes.setRowCount(0);
+
+        // Obtener los datos del controlador
+        List<Object[]> datosVentas = ventaControlador.generarReporteVentas(tipoFiltro);
+        
+        // Formateador para moneda
+        NumberFormat formatoMoneda = NumberFormat.getCurrencyInstance(new Locale("es", "CL"));
+
+        // Llenar la tabla con los datos
+        for (Object[] fila : datosVentas) {
+            // El precio viene en la 5ta posición (índice 4), lo formateamos
+            fila[4] = formatoMoneda.format(fila[4]);
+            modeloTablaReportes.addRow(fila);
+        }
+    }
+
+    /**
+     * Aplica un filtro de texto a los datos ya cargados en la tabla.
+     * No realiza una nueva consulta a la base de datos.
+     */
+    private void filtrarTablaLocalmente() {
+        String texto = txtBusquedaRapida.getText();
+        if (texto.trim().length() == 0) {
+            sorter.setRowFilter(null);
+        } else {
+            // El "(?i)" hace que la búsqueda no distinga mayúsculas de minúsculas
+            sorter.setRowFilter(RowFilter.regexFilter("(?i)" + texto));
+        }
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form. WARNING: Do NOT modify this code. The content of this method is always regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+    }// </editor-fold>//GEN-END:initComponents
+
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // End of variables declaration//GEN-END:variables
+}

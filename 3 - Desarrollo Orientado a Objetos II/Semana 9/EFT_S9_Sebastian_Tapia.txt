@@ -1,0 +1,156 @@
+-- 1. CREACIÓN Y USO DE LA BASE DE DATOS
+CREATE DATABASE computec;
+USE computec;
+
+-- 2. CREACIÓN DE LAS TABLAS
+CREATE TABLE clientes (
+    rut VARCHAR(12) PRIMARY KEY,
+    nombre_completo VARCHAR(100) NOT NULL,
+    direccion VARCHAR(150),
+    comuna VARCHAR(50),
+    correo VARCHAR(100),
+    telefono VARCHAR(15),
+    fecha_nacimiento DATE
+);
+
+CREATE TABLE equipos (
+    id_equipo INT PRIMARY KEY AUTO_INCREMENT,
+    modelo VARCHAR(100) NOT NULL UNIQUE,
+    cpu VARCHAR(50),
+    disco_duro_gb INT,
+    ram_gb INT,
+    precio DOUBLE,
+    tipo_equipo VARCHAR(20) NOT NULL,
+    tamano_pantalla DOUBLE,
+    es_touch BOOLEAN,
+    puertos_usb INT,
+    potencia_fuente VARCHAR(50),
+    factor_forma VARCHAR(50)
+);
+
+CREATE TABLE ventas (
+    id_venta INT PRIMARY KEY AUTO_INCREMENT,
+    fecha_hora DATETIME NOT NULL,
+    cliente_rut VARCHAR(12),
+    equipo_id INT,
+    precio_final DOUBLE,
+    FOREIGN KEY (cliente_rut) REFERENCES clientes(rut),
+    FOREIGN KEY (equipo_id) REFERENCES equipos(id_equipo)
+);
+
+-- 3. INSERCIÓN DE DATOS DE EJEMPLO
+INSERT INTO clientes (rut, nombre_completo, direccion, comuna, correo, telefono, fecha_nacimiento) VALUES
+('11.111.111-1', 'Juan Perez', 'Av. Siempre Viva 123', 'Springfield', 'juan.perez@email.com', '912345678', '1985-05-20'),
+('22.222.222-2', 'Maria Gonzalez', 'Calle Falsa 456', 'Santiago', 'maria.g@email.com', '987654321', '1955-11-10'),
+('33.333.333-3', 'Pedro Soto', 'Pasaje Corto 789', 'Maipu', 'pedro.soto@email.com', '955554444', '1992-01-30');
+
+INSERT INTO equipos (modelo, cpu, disco_duro_gb, ram_gb, precio, tipo_equipo, tamano_pantalla, es_touch, puertos_usb) VALUES
+('Laptop Gamer Nitro 5', 'Intel Core i5', 512, 16, 899990, 'Laptop', 15.6, false, 4),
+('Ultrabook Swift 3', 'AMD Ryzen 7', 1024, 16, 749990, 'Laptop', 14.0, true, 3);
+
+INSERT INTO equipos (modelo, cpu, disco_duro_gb, ram_gb, precio, tipo_equipo, potencia_fuente, factor_forma) VALUES
+('PC de Oficina Pro', 'Intel Core i3', 256, 8, 399990, 'Desktop', '450W', 'Micro-ATX'),
+('Workstation Alpha', 'Intel Xeon', 2048, 32, 1500000, 'Desktop', '750W 80+ Gold', 'ATX');
+
+INSERT INTO ventas (fecha_hora, cliente_rut, equipo_id, precio_final) VALUES
+('2025-10-08 10:30:00', '11.111.111-1', 1, 899990),
+('2025-10-09 15:45:10', '22.222.222-2', 3, 339991.5);
+
+-- 4. CREACIÓN DE PROCEDIMIENTOS ALMACENADOS
+DELIMITER $$
+CREATE PROCEDURE sp_registrarCliente(IN p_rut VARCHAR(12), IN p_nombre VARCHAR(100), IN p_direccion VARCHAR(150), IN p_comuna VARCHAR(50), IN p_correo VARCHAR(100), IN p_telefono VARCHAR(15), IN p_fecha_nacimiento DATE)
+BEGIN
+    INSERT INTO clientes (rut, nombre_completo, direccion, comuna, correo, telefono, fecha_nacimiento)
+    VALUES (p_rut, p_nombre, p_direccion, p_comuna, p_correo, p_telefono, p_fecha_nacimiento);
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE sp_buscarClientePorRut(IN p_rut VARCHAR(12))
+BEGIN
+    SELECT * FROM clientes WHERE rut = p_rut;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE sp_listarClientes()
+BEGIN
+    SELECT * FROM clientes;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE sp_actualizarCliente(IN p_rut VARCHAR(12), IN p_nombre VARCHAR(100), IN p_direccion VARCHAR(150), IN p_comuna VARCHAR(50), IN p_correo VARCHAR(100), IN p_telefono VARCHAR(15), IN p_fecha_nacimiento DATE)
+BEGIN
+    UPDATE clientes SET nombre_completo = p_nombre, direccion = p_direccion, comuna = p_comuna, correo = p_correo, telefono = p_telefono, fecha_nacimiento = p_fecha_nacimiento WHERE rut = p_rut;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE sp_eliminarCliente(IN p_rut VARCHAR(12))
+BEGIN
+    DELETE FROM clientes WHERE rut = p_rut;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE sp_registrarEquipo(IN p_modelo VARCHAR(100), IN p_cpu VARCHAR(50), IN p_disco_duro_gb INT, IN p_ram_gb INT, IN p_precio DOUBLE, IN p_tipo_equipo VARCHAR(20), IN p_tamano_pantalla DOUBLE, IN p_es_touch BOOLEAN, IN p_puertos_usb INT, IN p_potencia_fuente VARCHAR(50), IN p_factor_forma VARCHAR(50), OUT p_id_generado INT)
+BEGIN
+    INSERT INTO equipos (modelo, cpu, disco_duro_gb, ram_gb, precio, tipo_equipo, tamano_pantalla, es_touch, puertos_usb, potencia_fuente, factor_forma) VALUES (p_modelo, p_cpu, p_disco_duro_gb, p_ram_gb, p_precio, p_tipo_equipo, p_tamano_pantalla, p_es_touch, p_puertos_usb, p_potencia_fuente, p_factor_forma);
+    SET p_id_generado = LAST_INSERT_ID();
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE sp_listarEquipos()
+BEGIN
+    SELECT * FROM equipos;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE sp_buscarEquipoPorId(IN p_id_equipo INT)
+BEGIN
+    SELECT * FROM equipos WHERE id_equipo = p_id_equipo;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE sp_actualizarEquipo(IN p_id_equipo INT, IN p_modelo VARCHAR(100), IN p_cpu VARCHAR(50), IN p_disco_duro_gb INT, IN p_ram_gb INT, IN p_precio DOUBLE, IN p_tipo_equipo VARCHAR(20), IN p_tamano_pantalla DOUBLE, IN p_es_touch BOOLEAN, IN p_puertos_usb INT, IN p_potencia_fuente VARCHAR(50), IN p_factor_forma VARCHAR(50))
+BEGIN
+    UPDATE equipos SET modelo = p_modelo, cpu = p_cpu, disco_duro_gb = p_disco_duro_gb, ram_gb = p_ram_gb, precio = p_precio, tipo_equipo = p_tipo_equipo, tamano_pantalla = p_tamano_pantalla, es_touch = p_es_touch, puertos_usb = p_puertos_usb, potencia_fuente = p_potencia_fuente, factor_forma = p_factor_forma WHERE id_equipo = p_id_equipo;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE sp_eliminarEquipo(IN p_id_equipo INT)
+BEGIN
+    DELETE FROM equipos WHERE id_equipo = p_id_equipo;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE sp_registrarVenta(IN p_fecha_hora DATETIME, IN p_cliente_rut VARCHAR(12), IN p_equipo_id INT, IN p_precio_final DOUBLE)
+BEGIN
+    INSERT INTO ventas (fecha_hora, cliente_rut, equipo_id, precio_final)
+    VALUES (p_fecha_hora, p_cliente_rut, p_equipo_id, p_precio_final);
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE sp_reporteVentas(IN p_tipo_equipo VARCHAR(20))
+BEGIN
+    SELECT e.modelo AS modelo_equipo, c.nombre_completo AS nombre_cliente, c.telefono AS telefono_cliente, c.correo AS correo_cliente, v.precio_final AS precio_venta
+    FROM ventas v
+    JOIN clientes c ON v.cliente_rut = c.rut
+    JOIN equipos e ON v.equipo_id = e.id_equipo
+    WHERE (p_tipo_equipo = 'Todos' OR e.tipo_equipo = p_tipo_equipo);
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE sp_estadisticasVentas()
+BEGIN
+    SELECT COUNT(*) AS total_ventas, SUM(precio_final) AS monto_total FROM ventas;
+END$$
+DELIMITER ;
