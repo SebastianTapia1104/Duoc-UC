@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_asignacion_maquina" directorySegmentName="seg_0" id="0EE37BBB-7E86-C31F-7AA5-C477DCCF74A8">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>28B89FE2-1E9C-CD6E-9E99-365C1B53A3E7</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<sourcePk>2A9B47B3-4C03-9B22-40BE-6A67D157389E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1047275C-45FF-C908-80A8-4E5F91831A1F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D3B334A0-7A02-5A8D-41E6-5F3CBAE45DF2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

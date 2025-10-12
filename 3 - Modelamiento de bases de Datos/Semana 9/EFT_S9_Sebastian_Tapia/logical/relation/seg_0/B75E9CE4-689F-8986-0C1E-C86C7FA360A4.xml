@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_asignacion_turno" directorySegmentName="seg_0" id="B75E9CE4-689F-8986-0C1E-C86C7FA360A4">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>9CC65948-36DF-6FBB-4C18-0EC573CAA8CC</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<sourcePk>BDD8D1D9-CCAE-EA8D-5A15-4AC0F28F9AF2</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>EE6F6009-7B2E-2ADA-1905-275A21A231D9</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D3B334A0-7A02-5A8D-41E6-5F3CBAE45DF2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

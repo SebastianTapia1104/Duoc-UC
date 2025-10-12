@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="69163EFF-0DD8-A5C9-3EF5-8C5F05DCD303" name="COMUNA">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>582FA861-3B47-CF76-0A5C-C98F03CA56D7</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_comuna" id="67467649-765B-1274-06F7-B76B58BC9BF6">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>4A1EE328-8FC1-3205-5C8E-C780A5790356</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B89FCABF-E209-8924-08A0-EBD065C0B41B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
+<autoIncrementStartWith>1050</autoIncrementStartWith>
+<autoIncrementIncrementBy>5</autoIncrementIncrementBy>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="nombre_comuna" id="408A460F-61A7-1F55-3CEA-86559FA310A3">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>08CB6F14-493B-AACA-B870-008D9916B740</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>512E5F72-537C-2CB0-12F7-5F021CDA6E0B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="region_id" id="BB088789-AA29-D82F-48FE-5003CD3E5D1B">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>820250FD-DE37-5649-E940-039675E3F34F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>6F930B01-C565-6CFB-E9D7-08FBDF248C77</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4F4BE018-315C-8FDC-9684-8728DF64AB94" referredColumn="9FC06125-D67D-6676-BEA1-7150EDA4DD1E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CD12B777-ED84-8731-031B-11D167986DB2" name="pk_comuna">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>805BF25D-8DED-3A0D-CD0F-2869851B76D5</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="67467649-765B-1274-06F7-B76B58BC9BF6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8C16DB38-5B28-129F-FF31-3A09251AEF5D" name="fk_comuna_region">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BB088789-AA29-D82F-48FE-5003CD3E5D1B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1047275C-45FF-C908-80A8-4E5F91831A1F" name="MAQUINA">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>9C12FCD5-375C-92C1-E836-5E68B550A17E</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="num maquina" id="61F9DC34-9482-9F84-2878-EF173F5271D8">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>1AB02092-FBCF-CB02-A301-9F55503B5D80</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B89FCABF-E209-8924-08A0-EBD065C0B41B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="planta id" id="80BD70F1-6D23-CAF8-99F4-4B6E219F13F3">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>05B355CC-75EB-D4BB-39CC-954F106E2298</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<referedAttribute>4D353932-BEF9-D6E5-664D-26ABD361895C</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>6F930B01-C565-6CFB-E9D7-08FBDF248C77</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre maquina" id="68075D74-3A95-AE4B-BFA8-27D571828E63">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>0E8067A0-93E8-B4BA-A786-CD9EBF2E7998</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>512E5F72-537C-2CB0-12F7-5F021CDA6E0B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado" id="E6481118-DBFF-F04F-EEAD-F65FA2AFD5E8">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>3B1D9398-45BC-D9B7-480D-E9343D6ECE5C</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<constraintName>ck_estado_maquina</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>22BB7FDC-C268-28F7-8D82-969B82900E39</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="S" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo maquina id" id="3E2FB97F-16B7-6090-BBCE-BFCD0F87FE07">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>5AA6ED8E-B37A-06DC-4125-127BFDB927E7</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<referedAttribute>20C14033-101D-BE39-5E57-8053F8ADAFA8</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>57FB59B1-BF6A-7F33-9381-5D25F02F072C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2A9B47B3-4C03-9B22-40BE-6A67D157389E" name="pk maquina">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>28DC487E-1C6E-F82F-DC9B-EBDE30B7CC08</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>61F9DC34-9482-9F84-2878-EF173F5271D8</attributeRef>
+<attributeRef>80BD70F1-6D23-CAF8-99F4-4B6E219F13F3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

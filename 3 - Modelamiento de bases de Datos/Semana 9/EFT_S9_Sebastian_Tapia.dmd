@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="EFT_S9_Sebastian_Tapia" id="D28E28C8-E7B8-507A-A3AF-B5513B336931" version="3.5">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:08 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>D28E28C8-E7B8-507A-A3AF-B5513B336931</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="E0A1F243-701B-BAD5-99A1-1E315C471C6F">
+<designStoragePath>C:\semana 9</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

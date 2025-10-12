@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="REGION" directorySegmentName="seg_0" id="947147D3-60DB-1BB2-7816-F6A9604BA12F">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="nombre_region" id="2ADC7B7E-A950-718C-FF7D-139AB6D59E8A">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_region" id="9FC06125-D67D-6676-BEA1-7150EDA4DD1E">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="pk_region" id="37C3FEF5-C18F-4565-04FC-64896925D1E5">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="un_nombre_region" id="225569FA-8C67-8F88-DA17-4BAF33DDDCDB">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

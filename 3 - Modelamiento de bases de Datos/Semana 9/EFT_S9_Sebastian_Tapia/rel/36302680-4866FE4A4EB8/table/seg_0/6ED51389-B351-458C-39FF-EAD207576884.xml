@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6ED51389-B351-458C-39FF-EAD207576884" name="TECNICO_MANTENCION">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>FA3DB3BA-36C9-215E-916F-B445680C6538</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="empleado_id" id="272368DA-11D5-6263-0844-47692E5BB74E">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>73568FF1-7B6C-95CD-C4BE-EE2F4ED05C80</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B89FCABF-E209-8924-08A0-EBD065C0B41B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1624F5E2-320F-D243-ACEB-0405095E7501" referredColumn="ED73531C-E6CE-A5EE-E55D-D5BE5EAFC804"/>
+</associations>
+</Column>
+<Column name="especialidad" id="824E7532-0062-7D44-5C61-FF2A9D44AA00">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>9DE2D766-99F4-32CC-6BDF-A8A34E334170</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2D3905BB-1B27-8537-9DD5-DE86BE46F24F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nivel_certificacion" id="0DD8C14E-AF60-5373-1C3E-9F9A769380BC">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>7C287D09-0B2D-7578-D437-792F8FF255C3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2D3905BB-1B27-8537-9DD5-DE86BE46F24F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tiempo_respuesta_std" id="87FD368C-BA79-7954-7A9C-9C882568E75D">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>7A1B69FE-EEE2-0709-E3C4-A888ECDC32B6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>57FB59B1-BF6A-7F33-9381-5D25F02F072C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="98BF2696-5910-27BE-800C-63294795AC39" name="pk_tecnico_mantencion">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>7301C172-51B4-4388-4988-224ED497E019</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="272368DA-11D5-6263-0844-47692E5BB74E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C83B17E6-5814-23B7-B10F-2260D96B2146" name="fk_tecnico_empleado">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="272368DA-11D5-6263-0844-47692E5BB74E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

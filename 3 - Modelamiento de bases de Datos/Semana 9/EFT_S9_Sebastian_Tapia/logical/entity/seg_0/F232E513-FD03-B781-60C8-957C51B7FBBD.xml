@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F232E513-FD03-B781-60C8-957C51B7FBBD" name="TIPO MAQUINA">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>EB18B9B9-544E-CE45-9D28-6A8FE26F90AE</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id tipo maquina" id="20C14033-101D-BE39-5E57-8053F8ADAFA8">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>2066FA74-A560-0934-7BB4-C520390A5A8D</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>57FB59B1-BF6A-7F33-9381-5D25F02F072C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre tipo maquina" id="86726ABA-402D-A823-15CB-38B21632160B">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>E37493C5-F828-9831-1525-77690D34E95D</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>512E5F72-537C-2CB0-12F7-5F021CDA6E0B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0BA2C93F-42E9-FD72-4566-61EE33F4ACCB" name="pk tipo maquina">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>67775C5B-EB28-B492-26E9-F36CA26226A5</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>20C14033-101D-BE39-5E57-8053F8ADAFA8</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="58A8A631-1A91-F345-23CA-2230302EDAEB" name="un nombre tipo maquina">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>F6673108-8315-F8A2-280D-868CC623A813</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>86726ABA-402D-A823-15CB-38B21632160B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

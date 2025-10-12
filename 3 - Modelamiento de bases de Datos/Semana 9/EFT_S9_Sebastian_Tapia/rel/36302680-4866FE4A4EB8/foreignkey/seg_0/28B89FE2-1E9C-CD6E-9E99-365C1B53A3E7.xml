@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="28B89FE2-1E9C-CD6E-9E99-365C1B53A3E7" containerWithKeyObject="CC3ED41E-F94D-8D5D-7852-DC20093B9E93" localFKIndex="0C77B5A5-E23A-BA54-E514-772707A3447C" name="fk_asignacion_maquina">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>0B4BCBA7-797A-55DE-D5E9-4B7DCA9E504E</importedID>
+<referredTableLongName>MAQUINA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9C12FCD5-375C-92C1-E836-5E68B550A17E</referredTableID>
+<keyObject>28DC487E-1C6E-F82F-DC9B-EBDE30B7CC08</keyObject>
+<referredKeyID>28DC487E-1C6E-F82F-DC9B-EBDE30B7CC08</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>num_maquina,planta_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

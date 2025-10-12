@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_orden_maquina" directorySegmentName="seg_0" id="78887FEB-C118-7118-B859-6DDB028D5E12">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:18:24 UTC</createdTime>
+<generatorID>BF8F4115-43F0-1421-5BB5-D91BAA37BDA0</generatorID>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<engineerTo>
+<item key="36302680-21E0-BDF2-3B1C-4866FE4A4EB8" value="true"/>
+</engineerTo>
+<sourcePk>2A9B47B3-4C03-9B22-40BE-6A67D157389E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1047275C-45FF-C908-80A8-4E5F91831A1F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2015D0ED-25DA-0A71-BFEA-C175695228D0</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

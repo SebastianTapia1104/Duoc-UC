@@ -1,0 +1,169 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CC3ED41E-F94D-8D5D-7852-DC20093B9E93" name="ASIGNACION_TURNO">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>E0F74881-2483-D660-C6DD-28E7D14A52D0</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_asignacion" id="338B14E8-AC77-477C-8B9D-40F32EA704B2">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>026236CB-DBAC-C33F-A0A0-BF756C27F1B3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B450B81D-97D1-2372-692C-65299FFED585</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_asignacion" id="DE67359E-BD5A-2401-891B-2FB68B07BF2E">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>696A5E0B-5E58-59C0-1A04-19E4E84B38DD</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>59AAF118-2DB2-491B-E0A3-D8FB1BB451F6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rol_desempenado" id="D488505C-634F-61BB-0272-9CB2D8187334">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>1D2C0C3B-751B-D818-0C40-19A7CA0CAD9C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2D3905BB-1B27-8537-9DD5-DE86BE46F24F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="empleado_id" id="9951491B-DF59-F496-B88B-C0B6E318CA38">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>AD53A26B-921C-B4A9-4762-62A3427B31BE</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B89FCABF-E209-8924-08A0-EBD065C0B41B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="303D563A-4FA2-B8D2-D7DC-6126589877A5" referredColumn="ED73531C-E6CE-A5EE-E55D-D5BE5EAFC804"/>
+</associations>
+</Column>
+<Column name="turno_id" id="85DD0C88-E2CD-0322-4A19-FDCB978F4DC6">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>C4BC51B3-510D-55BE-3E55-3BA9112149D5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2F5DF199-2703-E249-7539-755250497BF2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9CC65948-36DF-6FBB-4C18-0EC573CAA8CC" referredColumn="1266D83C-E7FA-AD68-9757-F0C1BD9DE7A6"/>
+</associations>
+</Column>
+<Column name="num_maquina" id="66E17B5D-9458-5511-CE47-93EA3B07BCA3">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>70F3CFCD-C8EC-FE14-DCC6-FB99BF7FF9D9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B89FCABF-E209-8924-08A0-EBD065C0B41B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="28B89FE2-1E9C-CD6E-9E99-365C1B53A3E7" referredColumn="1AB02092-FBCF-CB02-A301-9F55503B5D80"/>
+</associations>
+</Column>
+<Column name="planta_id" id="567D6E8D-E08D-4BB9-F6EF-9DFE28753389">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>EC31C88E-A080-CB00-61F7-E877339F2C41</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>6F930B01-C565-6CFB-E9D7-08FBDF248C77</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="28B89FE2-1E9C-CD6E-9E99-365C1B53A3E7" referredColumn="1F670AF8-CB69-9880-0B57-0369E67881D0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F46B0946-5F58-7EFA-04D6-FCBC24165907" name="pk_asignacion_turno">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>48805009-921E-BBA5-8E0B-F0D6AA71645A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="338B14E8-AC77-477C-8B9D-40F32EA704B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2EB0516C-BF4C-4245-8284-FF837C4DEF98" name="un_empleado_fecha">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>0D0CF507-BA96-40CB-9EA3-33AB998BEE75</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9951491B-DF59-F496-B88B-C0B6E318CA38"/>
+<colUsage columnID="DE67359E-BD5A-2401-891B-2FB68B07BF2E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0C7954DE-66FD-3053-DAFA-B2C559598D06" name="fk_asignacion_empleado">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9951491B-DF59-F496-B88B-C0B6E318CA38"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0C77B5A5-E23A-BA54-E514-772707A3447C" name="fk_asignacion_maquina">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66E17B5D-9458-5511-CE47-93EA3B07BCA3"/>
+<colUsage columnID="567D6E8D-E08D-4BB9-F6EF-9DFE28753389"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C45A0B8F-552E-B1EB-1DAC-9D553C802FEE" name="fk_asignacion_turno">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85DD0C88-E2CD-0322-4A19-FDCB978F4DC6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

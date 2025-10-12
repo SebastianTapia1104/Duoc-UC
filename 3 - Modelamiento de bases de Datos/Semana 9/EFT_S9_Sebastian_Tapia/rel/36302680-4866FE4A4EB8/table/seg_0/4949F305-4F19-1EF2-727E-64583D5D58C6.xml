@@ -1,0 +1,153 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4949F305-4F19-1EF2-727E-64583D5D58C6" name="ORDEN_MANTENCION">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>03133867-2485-4943-5CE3-63F1F9E036B8</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_orden" id="592D8A95-36D1-2CAB-278D-202407CD4C12">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>2C4BD3F7-1C1A-9EA3-6C8F-E1D3B5205607</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>52BFF498-4109-F81F-F152-3C7287E62467</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_programada" id="AC074EE3-F163-D399-E37D-AEC1C1CCF3A0">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>4632286F-0E20-7A4B-593F-3DC1DDFA3F06</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>59AAF118-2DB2-491B-E0A3-D8FB1BB451F6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_ejecucion" id="B4EB9B2D-61C8-4B67-20FB-04F38C6DD11C">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>64AEE068-F67F-E6D3-2639-4E81FC4541A9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>59AAF118-2DB2-491B-E0A3-D8FB1BB451F6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="61C940FD-FE6A-1C1E-F763-00734B954EBC">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>015EFDD8-9FB1-E90B-4226-A36F203985BB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9518BBE1-C45A-F974-36F9-BC7E97DACB3D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_maquina" id="A4004350-E173-E68E-7CBA-7A5FCC2819C9">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>28AD9872-C8B9-DA54-1979-F70AE0401F3E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B89FCABF-E209-8924-08A0-EBD065C0B41B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BF8F4115-43F0-1421-5BB5-D91BAA37BDA0" referredColumn="1AB02092-FBCF-CB02-A301-9F55503B5D80"/>
+</associations>
+</Column>
+<Column name="planta_id" id="40D133F1-574D-06A0-14C2-3DF5A6CDFA0D">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>A99AF7B6-0656-1080-371A-F376582220CB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>6F930B01-C565-6CFB-E9D7-08FBDF248C77</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BF8F4115-43F0-1421-5BB5-D91BAA37BDA0" referredColumn="1F670AF8-CB69-9880-0B57-0369E67881D0"/>
+</associations>
+</Column>
+<Column name="tecnico_id" id="5CC2F411-D1CD-4A37-71F0-75D01635A584">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>F0152602-2BA4-C76B-5682-C854C4282554</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B89FCABF-E209-8924-08A0-EBD065C0B41B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="473551FB-53D4-A16E-A284-1E38777F01BD" referredColumn="272368DA-11D5-6263-0844-47692E5BB74E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4988FD45-1937-CC79-BAA6-8CBA59FBAB5A" name="pk_orden_mantencion">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>715C2CB8-1768-5B4A-9550-9481E16BDEF4</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="592D8A95-36D1-2CAB-278D-202407CD4C12"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0449F6B7-5A85-0446-D2AC-0DF5CD449F32" name="fk_orden_maquina">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A4004350-E173-E68E-7CBA-7A5FCC2819C9"/>
+<colUsage columnID="40D133F1-574D-06A0-14C2-3DF5A6CDFA0D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="493DCC23-AFB0-9FA7-256F-412DB2EB17DD" name="fk_orden_tecnico">
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5CC2F411-D1CD-4A37-71F0-75D01635A584"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="ck_fechas_mantencion" directorySegmentName="seg_0" id="E186CBCD-2B41-2347-72B8-E1151A692DA1">
+<sourceDDLFile>semana 9.sql</sourceDDLFile>
+<createdBy>Seba</createdBy>
+<createdTime>2025-10-12 08:16:27 UTC</createdTime>
+<ownerDesignName>EFT_S9_Sebastian_Tapia</ownerDesignName>
+<importedID>855F1752-0980-D1CD-7D7B-F56ECBC5B2A1</importedID>
+<rule><![CDATA[fecha_ejecucion IS NULL OR fecha_ejecucion >= fecha_programada]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>
