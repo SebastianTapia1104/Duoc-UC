@@ -72,7 +72,6 @@ SELECT
         || tp.desc_tipo_propiedad AS "CODIGO TIPO DESCRIPCION TIPO",
     COUNT(p.nro_propiedad) AS "TOTAL PROPIEDADES",
     TO_CHAR(ROUND(AVG(p.valor_arriendo)), 'L9G999G999', 'NLS_NUMERIC_CHARACTERS = ''.,'' NLS_CURRENCY = ''$''') AS "PROMEDIO_ARRIENDO",
-    -- Corregido: Usamos '999.00' para justificar a la derecha
     TO_CHAR(ROUND(AVG(p.superficie), 2), '999.00') AS "PROMEDIO SUPERFICIE", 
     TO_CHAR(ROUND(AVG(p.valor_arriendo / p.superficie)), 'L999G999', 'NLS_NUMERIC_CHARACTERS = ''.,'' NLS_CURRENCY = ''$''')
         || ' '
