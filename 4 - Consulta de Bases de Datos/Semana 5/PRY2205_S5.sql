@@ -41,7 +41,6 @@ ORDER BY
 
 CREATE TABLE CLIENTES_CUPOS_COMPRA AS
 SELECT
-    -- CORRECCIÓN APLICADA: Uso de 'FM9999999999' para eliminar los separadores de grupo (puntos).
     TO_CHAR(c.numrun, 'FM9999999999') || '-' || c.dvrun AS RUT_CLIENTE,
     ROUND(MONTHS_BETWEEN(SYSDATE, c.fecha_nacimiento) / 12) AS EDAD,
     TO_CHAR(tc.cupo_disp_compra, 'L9G999G999', 'NLS_CURRENCY=''$''') AS CUPO_DISPONIBLE_COMPRA,
