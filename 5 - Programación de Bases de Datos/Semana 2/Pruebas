@@ -1,0 +1,37 @@
+Procedimiento PL/SQL terminado correctamente.
+Procedimiento PL/SQL terminado correctamente.
+
+    ID_EMP NUMRUN_EMP D NOMBRE_EMPLEADO                                              NOMBRE_USUARIO       CLAVE_USUARIO       
+---------- ---------- - ------------------------------------------------------------ -------------------- --------------------
+       100   11649964 0 MARTA PATRICIA GALVEZ CASTRO                                 sMAR5*000X           61980999gz100012026 
+       110   12113369 4 NANCY  ROMERO DIAZ                                           vNAN5*3429           11977152er110012026 
+       120   12456905 1 JORGE FERNANDO CANALES BASTIAS                               cJOR5*5137           41966674ca120012026 
+       130   12466553 2 MARIA TERESA VIDAL PEREZ                                     dMAR5*4224           41976613vl130012026 
+       140   11745244 3 KARINA SOFIA VENEGAS SOTO                                    sKAR6*2332           71972041vs140012026 
+       150   11999100 4 CLAUDIO  CONTRERAS CASTILLO                                  cCLA7*3426           91975162co150012026 
+       160   12888868 5 JOSE PATRICIO PAEZ MACMILLAN                                 dJOS4*5529           81973154pz160012026 
+       170   12811094 6 PAULA ANDREA MOLINA GONZALEZ                                 vPAU5*7617           81987576in170012026 
+       180   14255602 7 CARLOTA MARINA MU�OZ ROJAS                                   sCAR7*7714           21991576mz180012026 
+       190   11630572 8 GUSTAVO ESTEBAN ARAVENA HERBAGE                              dGUS7*5819           61978094aa190012026 
+       200   11636534 9 LUIS ALFREDO ADASME ZU�IGA                                   sLUI4*4924           61982933ae200012026 
+
+    ID_EMP NUMRUN_EMP D NOMBRE_EMPLEADO                                              NOMBRE_USUARIO       CLAVE_USUARIO       
+---------- ---------- - ------------------------------------------------------------ -------------------- --------------------
+       210   12272880 K MARCO  LAPAZ SEPULVEDA                                       cMAR5*6K19           21978595la210012026 
+       220   11846972 5 MARCO ANTONIO OGAZ VARAS                                     dMAR5*0535           81968589oz220012026 
+       230   14283083 6 PEDRO HERNAN MONDACA COLLAO                                  vPED5*560X           21998244ac230012026 
+       240   14541837 7 MARCO LUIS ALVAREZ RIVERA                                    sMAR5*8724           51979417az240012026 
+       250   12482036 8 ADRIAN  OLAVE CASTILLO                                       cADR6*6834           41965085ol250012026 
+       260   12468081 9 PAOLA ANDREA SANCHEZ GONZALEZ                                dPAO5*598X           41996354sz260012026 
+       270   12260812 0 RAFAEL ALFONSO RIOS ZU�IGA                                   vRAF6*607X           22000055io270012026 
+       280   12899759 1 ERIKA  CACERES JIMENEZ                                       sERI5*5126           81977414cs280012026 
+       290   12868553 2 PATRICIA ROMINA CHACON AMAYA                                 cPAT8*5214           81994054ch290012026 
+       300   12648200 3 LUIS ANTONIO NARVAEZ MU�OZ                                   dLUI4*336X           62002612nz300012026 
+       310   11670042 5 VALESKA ANDREA GONGORA DEVIA                                 sVAL7*6522           61977085ga310012026 
+
+    ID_EMP NUMRUN_EMP D NOMBRE_EMPLEADO                                              NOMBRE_USUARIO       CLAVE_USUARIO       
+---------- ---------- - ------------------------------------------------------------ -------------------- --------------------
+       320   12642309 K JUAN ESTEBAN NAVARRO SANTIBA�EZ                              cJUA4*0K0X           61995229na320012026 
+
+23 filas seleccionadas. 
+
