@@ -1,0 +1,251 @@
+/* CASO 1: CÁLCULO DE PAGOS MOROSOS */
+SET SERVEROUTPUT ON;
+
+DECLARE
+    TYPE t_arr_multas IS VARRAY(20) OF NUMBER;
+    
+    v_multas_base t_arr_multas := t_arr_multas(
+        1200, -- 100 Cirugía General
+        1300, -- 200 Traumatología
+        1200, -- 300 Dermatología
+        1700, -- 400 Inmunología
+        1900, -- 500 Fisiatría
+        1900, -- 600 Medicina Interna
+        1100, -- 700 Medicina General
+        0,    -- 800 Neurología (No aplica)
+        1700, -- 900 Otorrinolaringología
+        0,    -- 1000 Oftalmología (No aplica)
+        2000, -- 1100 Psiquiatría Adultos
+        0,    -- 1200 Urología
+        0,    -- 1300 Cirugía Cardiovasc
+        2300, -- 1400 Cirugía Digestiva
+        0,    -- 1500 Cardiología
+        0,    -- 1600 Gastroenterología
+        0,    -- 1700 Oncología
+        2300, -- 1800 Reumatología
+        0,    -- 1900 Cirugía Plástica
+        0     -- 2000 (Reserva)
+    );
+    
+    -- Variable BIND para el año anterior
+    v_anio_proceso NUMBER := EXTRACT(YEAR FROM SYSDATE) - 1;
+    
+    -- Variables para cálculos
+    v_dias_morosidad NUMBER;
+    v_valor_multa    NUMBER;
+    v_edad_paciente  NUMBER;
+    v_porc_descto    NUMBER;
+    v_monto_final    NUMBER;
+    v_indice_arr     NUMBER;
+    
+    CURSOR cur_morosos IS
+        SELECT 
+            p.pac_run,
+            p.dv_run,
+            p.pnombre || ' ' || p.snombre || ' ' || p.apaterno || ' ' || p.amaterno AS nombre_paciente,
+            p.apaterno, -- Para ordenar
+            p.fecha_nacimiento,
+            a.ate_id,
+            pa.fecha_venc_pago,
+            pa.fecha_pago,
+            e.esp_id,
+            e.nombre AS nombre_especialidad
+        FROM atencion a
+        JOIN pago_atencion pa ON a.ate_id = pa.ate_id
+        JOIN paciente p ON a.pac_run = p.pac_run
+        JOIN especialidad e ON a.esp_id = e.esp_id
+        WHERE pa.fecha_pago > pa.fecha_venc_pago -- Condición de morosidad
+          AND EXTRACT(YEAR FROM pa.fecha_venc_pago) = v_anio_proceso
+        ORDER BY pa.fecha_venc_pago ASC, p.apaterno ASC;
+
+    reg_moroso cur_morosos%ROWTYPE;
+
+BEGIN
+    -- 1. Limpieza tabla destino
+    EXECUTE IMMEDIATE 'TRUNCATE TABLE PAGO_MOROSO';
+    
+    -- 2. Abrir Cursor
+    OPEN cur_morosos;
+    LOOP
+        FETCH cur_morosos INTO reg_moroso;
+        EXIT WHEN cur_morosos%NOTFOUND;
+        
+        v_porc_descto := 0;
+        
+        -- 3. Calcular días de morosidad
+        v_dias_morosidad := reg_moroso.fecha_pago - reg_moroso.fecha_venc_pago;
+        
+        -- 4. Obtener multa base del VARRAY usando (ID / 100)
+        v_indice_arr := reg_moroso.esp_id / 100;
+        
+        IF v_indice_arr BETWEEN 1 AND 20 THEN
+            v_valor_multa := v_multas_base(v_indice_arr) * v_dias_morosidad;
+        ELSE
+            v_valor_multa := 0;
+        END IF;
+        
+        -- 5. Calcular edad y buscar descuento Tercera Edad
+        v_edad_paciente := TRUNC(MONTHS_BETWEEN(SYSDATE, reg_moroso.fecha_nacimiento) / 12);
+        
+        BEGIN
+            SELECT porcentaje_descto 
+            INTO v_porc_descto
+            FROM porc_descto_3ra_edad
+            WHERE v_edad_paciente BETWEEN anno_ini AND anno_ter;
+        EXCEPTION
+            WHEN NO_DATA_FOUND THEN
+                v_porc_descto := 0;
+        END;
+        
+        -- 6. Calcular monto final
+        v_monto_final := v_valor_multa - (v_valor_multa * v_porc_descto / 100);
+        
+        -- 7. Insertar (Solo si hay multa > 0 para evitar basura, aunque la pauta dice "todos los morosos")
+        -- Se asume insertar siempre que cumpla la condición del cursor.
+        INSERT INTO PAGO_MOROSO (
+            PAC_RUN, 
+            PAC_DV_RUN, 
+            PAC_NOMBRE, 
+            ATE_ID, 
+            FECHA_VENC_PAGO, 
+            FECHA_PAGO, 
+            DIAS_MOROSIDAD, 
+            ESPECIALIDAD_ATENCION, 
+            MONTO_MULTA
+        ) VALUES (
+            reg_moroso.pac_run,
+            reg_moroso.dv_run,
+            SUBSTR(reg_moroso.nombre_paciente, 1, 50), -- Ajustar largo por si acaso
+            reg_moroso.ate_id,
+            reg_moroso.fecha_venc_pago,
+            reg_moroso.fecha_pago,
+            v_dias_morosidad,
+            SUBSTR(reg_moroso.nombre_especialidad, 1, 30),
+            ROUND(v_monto_final)
+        );
+        
+    END LOOP;
+    CLOSE cur_morosos;
+    
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Caso 1 finalizado correctamente.');
+    
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error Caso 1: ' || SQLERRM);
+END;
+/
+
+/* CASO 2: DESTINACIÓN DE MÉDICOS */
+SET SERVEROUTPUT ON;
+
+DECLARE
+    TYPE t_destinos IS VARRAY(3) OF VARCHAR2(100);
+    v_lugares t_destinos := t_destinos(
+        'Servicio de Atención Primaria de Urgencia (SAPU)', 
+        'Hospitales del área de la Salud Pública', 
+        'Centros de Salud Familiar (CESFAM)'
+    );
+    
+    v_anio_proceso NUMBER := EXTRACT(YEAR FROM SYSDATE) - 1;
+    v_total_atenciones NUMBER;
+    v_destino_asignado VARCHAR2(100);
+    v_correo_generado  VARCHAR2(100);
+    
+    -- Cursor con columnas reales de MEDICO y UNIDAD
+    CURSOR cur_medicos IS
+        SELECT 
+            m.med_run,
+            m.dv_run,
+            m.pnombre || ' ' || m.snombre || ' ' || m.apaterno || ' ' || m.amaterno AS nombre_completo,
+            m.apaterno,
+            m.uni_id,
+            u.nombre AS nombre_unidad
+        FROM medico m
+        JOIN unidad u ON m.uni_id = u.uni_id
+        ORDER BY u.nombre, m.apaterno;
+
+    reg_medico cur_medicos%ROWTYPE;
+
+BEGIN
+    -- 1. Limpieza
+    EXECUTE IMMEDIATE 'TRUNCATE TABLE MEDICO_SERVICIO_COMUNIDAD';
+    
+    -- 2. Recorrer médicos
+    OPEN cur_medicos;
+    LOOP
+        FETCH cur_medicos INTO reg_medico;
+        EXIT WHEN cur_medicos%NOTFOUND;
+        
+        -- 3. Contar atenciones (Tabla ATENCION, campo med_run)
+        SELECT COUNT(*)
+        INTO v_total_atenciones
+        FROM atencion
+        WHERE med_run = reg_medico.med_run
+          AND EXTRACT(YEAR FROM fecha_atencion) = v_anio_proceso;
+          
+        -- 4. Lógica de Destinación (IDs según tu script de UNIDAD)
+        -- 100: AMBULATORIA, 400: ADULTO -> SAPU
+        IF reg_medico.uni_id IN (100, 400) THEN
+            v_destino_asignado := v_lugares(1);
+            
+        -- 200: URGENCIA, 700: CIRUGIA, 800: PLASTICA, 1000: TRAUMA -> Dep. Cantidad
+        ELSIF reg_medico.uni_id IN (200, 700, 800, 1000) THEN
+            IF v_total_atenciones <= 3 THEN
+                v_destino_asignado := v_lugares(1); -- SAPU
+            ELSE
+                v_destino_asignado := v_lugares(2); -- Hospitales
+            END IF;
+            
+        -- 300: CRITICO, 500: ONCOLOGICA, 900: CARDIOLOGIA -> Hospitales
+        ELSIF reg_medico.uni_id IN (300, 500, 900) THEN
+            v_destino_asignado := v_lugares(2);
+            
+        -- 600: PSIQUIATRIA -> CESFAM
+        ELSIF reg_medico.uni_id = 600 THEN
+            v_destino_asignado := v_lugares(3);
+            
+        ELSE
+            v_destino_asignado := 'Sin Asignación';
+        END IF;
+        
+        -- 5. Generar Correo
+        -- Dos primeras letras unidad + Penúltima y Antepenúltima Apellido + 3 últimos RUN
+        v_correo_generado := LOWER(
+            SUBSTR(reg_medico.nombre_unidad, 1, 2) || 
+            SUBSTR(reg_medico.apaterno, -2, 1) || 
+            SUBSTR(reg_medico.apaterno, -3, 1) || 
+            SUBSTR(TO_CHAR(reg_medico.med_run), -3) || 
+            '@medicocktk.cl'
+        );
+        
+        -- 6. Insertar (Ojo: id_med_scomun es GENERATED ALWAYS, no se inserta)
+        INSERT INTO MEDICO_SERVICIO_COMUNIDAD (
+            UNIDAD,
+            RUN_MEDICO,
+            NOMBRE_MEDICO,
+            CORREO_INSTITUCIONAL,
+            TOTAL_ATEN_MEDICAS,
+            DESTINACION
+        ) VALUES (
+            SUBSTR(reg_medico.nombre_unidad, 1, 50),
+            reg_medico.med_run || '-' || reg_medico.dv_run,
+            SUBSTR(reg_medico.nombre_completo, 1, 50),
+            v_correo_generado,
+            v_total_atenciones,
+            v_destino_asignado
+        );
+        
+    END LOOP;
+    CLOSE cur_medicos;
+    
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Caso 2 finalizado correctamente.');
+
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error Caso 2: ' || SQLERRM);
+END;
+/
