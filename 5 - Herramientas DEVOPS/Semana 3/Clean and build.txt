@@ -1,0 +1,87 @@
+cd C:\Users\sebas\Downloads\Sucursal_vehiculos; "JAVA_HOME=C:\\Program Files\\Java\\jdk-17" cmd /c "\".\\mvnw.cmd\" \"-Dmaven.ext.class.path=C:\\Program Files\\NetBeans-25\\netbeans\\java\\maven-nblib\\netbeans-eventspy.jar\" --no-transfer-progress clean install"
+Scanning for projects...
+
+--------------------< com.vehiculos:VehiculosRest >---------------------
+Building VehiculosRest 1.0
+  from pom.xml
+--------------------------------[ war ]---------------------------------
+
+--- clean:3.3.2:clean (default-clean) @ VehiculosRest ---
+Deleting C:\Users\sebas\Downloads\Sucursal_vehiculos\target
+
+--- resources:3.3.1:resources (default-resources) @ VehiculosRest ---
+Copying 1 resource from src\main\resources to target\classes
+Copying 0 resource from src\main\resources to target\classes
+
+--- compiler:3.11.0:compile (default-compile) @ VehiculosRest ---
+Changes detected - recompiling the module! :source
+Compiling 8 source files with javac [debug release 17] to target\classes
+
+--- resources:3.3.1:testResources (default-testResources) @ VehiculosRest ---
+skip non existing resourceDirectory C:\Users\sebas\Downloads\Sucursal_vehiculos\src\test\resources
+
+--- compiler:3.11.0:testCompile (default-testCompile) @ VehiculosRest ---
+Changes detected - recompiling the module! :dependency
+Compiling 1 source file with javac [debug release 17] to target\test-classes
+
+--- surefire:3.1.2:test (default-test) @ VehiculosRest ---
+Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.vehiculos.VehiculosRest.VehiculosRestApplicationTests
+01:58:02.311 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.vehiculos.VehiculosRest.VehiculosRestApplicationTests]: VehiculosRestApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:58:02.388 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.vehiculos.VehiculosRest.VehiculosRestApplication for test class com.vehiculos.VehiculosRest.VehiculosRestApplicationTests
+01:58:02.529 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2026-02-02T01:58:02.732-03:00  INFO 3488 --- [           main] c.v.V.VehiculosRestApplicationTests      : Starting VehiculosRestApplicationTests using Java 17.0.15 with PID 3488 (started by Seba in C:\Users\sebas\Downloads\Sucursal_vehiculos)
+2026-02-02T01:58:02.733-03:00  INFO 3488 --- [           main] c.v.V.VehiculosRestApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2026-02-02T01:58:03.377-03:00  INFO 3488 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-02T01:58:03.424-03:00  INFO 3488 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interface.
+2026-02-02T01:58:03.767-03:00  INFO 3488 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-02T01:58:03.826-03:00  INFO 3488 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-02-02T01:58:03.861-03:00  INFO 3488 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-02T01:58:04.113-03:00  INFO 3488 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-02T01:58:04.140-03:00  INFO 3488 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-02T01:58:05.734-03:00  INFO 3488 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3321291a
+2026-02-02T01:58:05.736-03:00  INFO 3488 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-02T01:58:06.698-03:00  INFO 3488 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02T01:58:07.734-03:00  INFO 3488 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T01:58:08.118-03:00  WARN 3488 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-02T01:58:08.504-03:00  INFO 3488 --- [           main] c.v.V.VehiculosRestApplicationTests      : Started VehiculosRestApplicationTests in 5.986 seconds (process running for 6.743)
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.755 s -- in com.vehiculos.VehiculosRest.VehiculosRestApplicationTests
+
+Results:
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+
+--- war:3.4.0:war (default-war) @ VehiculosRest ---
+Packaging webapp
+Assembling webapp [VehiculosRest] in [C:\Users\sebas\Downloads\Sucursal_vehiculos\target\vehiculosBuild]
+Processing war project
+Building war: C:\Users\sebas\Downloads\Sucursal_vehiculos\target\vehiculosBuild.war
+
+--- spring-boot:3.2.4:repackage (repackage) @ VehiculosRest ---
+Replacing main artifact C:\Users\sebas\Downloads\Sucursal_vehiculos\target\vehiculosBuild.war with repackaged archive, adding nested dependencies in BOOT-INF/.
+The original artifact has been renamed to C:\Users\sebas\Downloads\Sucursal_vehiculos\target\vehiculosBuild.war.original
+
+--- install:3.1.1:install (default-install) @ VehiculosRest ---
+Installing C:\Users\sebas\Downloads\Sucursal_vehiculos\pom.xml to C:\Users\sebas\.m2\repository\com\vehiculos\VehiculosRest\1.0\VehiculosRest-1.0.pom
+Installing C:\Users\sebas\Downloads\Sucursal_vehiculos\target\vehiculosBuild.war to C:\Users\sebas\.m2\repository\com\vehiculos\VehiculosRest\1.0\VehiculosRest-1.0.war
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time:  16.271 s
+Finished at: 2026-02-02T01:58:14-03:00
+------------------------------------------------------------------------
